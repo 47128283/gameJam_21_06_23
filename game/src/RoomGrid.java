@@ -12,9 +12,9 @@ import java.util.function.Consumer;
 // import java.util.stream.IntStream;
 
 class RoomGrid implements Iterable<RoomTile> {
-    public static int cellSize = 35;
-    public static int colCount = 7;
-    public static int rowCount = 7;
+    public static int tileSize = 35;
+    public static int colCount = 3;
+    public static int rowCount = 3;
     public static int horizMargin = 10;
     public static int vertiMargin = 10;
 
@@ -24,34 +24,24 @@ class RoomGrid implements Iterable<RoomTile> {
         // setup the cells
         for (int i = 0; i < tiles.length; i++) {
             for (int j = 0; j < tiles[i].length; j++) {
-                int t = ;
-                int x = horizMargin + cellSize * i;
-                int y = vertiMargin + cellSize * j;
-                tiles[i][j] = new RoomTile(t, j, x, y);
+                int x = horizMargin + tileSize * i;
+                int y = vertiMargin + tileSize * j;
+                tiles[i][j] = new RoomTile(i, j, x, y,'#');
             }
         }
     }
 
     protected RoomGrid(RoomType t) {
-        
-    }
-
-    
-
-    public List<Cell> cellsInRange(char c1, int r1, char c2, int r2) {
-        int c1i = labelToCol(c1);
-        int c2i = labelToCol(c2);
-        List<Cell> output = new ArrayList<Cell>();
-        for (int i = c1i; i <= c2i; i++) {
-            for (int j = r1; j <= r2; j++) {
-                cellAtColRow(colToLabel(i), j).ifPresent(output::add);
+        int count = 0;
+        for (int i = 0; i < tiles.length; i++) {
+            for (int j = 0; j < tiles[i].length; j++) {
+                int x = horizMargin + tileSize * i;
+                int y = vertiMargin + tileSize * j;
+                char[] tt = t.rooms.toCharArray();
+                tiles[i][j] = new RoomTile(i, j, x, y, tt[count]);
+                count ++;
             }
         }
-        return output;
-    }
-
-    public void replaceCell(Cell old, Cell replacement) {
-        cells[labelToCol(old.col)][old.row] = replacement;
     }
 
     /**

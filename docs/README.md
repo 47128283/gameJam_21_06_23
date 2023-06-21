@@ -6,7 +6,7 @@
 <!--      Game name:    ...                                                                -->
 <!--         Branch:    main                                                               -->
 <!--        Created:    2023-06-21                                                         -->
-<!--    Last update:    2023-06-21                                                         -->
+<!--    Last update:    2023-06-22                                                         -->
 <!--         Author:    47128283                                                           -->
 <!--                                                                                       -->
 <!--        Repo URL:                                                                      -->
@@ -86,6 +86,17 @@
                 </ul>
             </details>
         </li>
+        <li><code>[21/06/23]</code> ---> <i>Wed Night Ivan</i>
+            <details>
+                <summary><i>show / hide</i></summary>
+                <ul>
+                    <li><code> ===== ===== ===== ===== ===== </code></li>
+                    <li><code>[05:18pm]</code> ---> <i>Created Branch</i></li>
+                    <li><code>[00:00pm]</code> ---> <i>worked on room tile and room grid</i></li>
+                    <li><code> ===== ===== ===== ===== ===== </code></li>
+                </ul>
+            </details>
+        </li>
         <li><code>[22/06/23]</code> ---> <i><code>Aurora</code>'s/<code>Corb</code>'s branch</i>
             <details>
                 <summary><i>show / hide</i></summary>
@@ -98,27 +109,11 @@
                     <li><code>[12:53am]</code> ---> <i>filled out <code>Main</code> including nested <code>App</code> object which contains the <code>Stage</code> instance</i></li>
                     <li><code>[12:53am]</code> ---> <i>made the path of <code>Main</code>--&gt;<code>App</code>--&gt;<code>Stage</code>--&gt;<code>MapGrid</code> call/object structure</i></li>
                     <li><code>[12:53am]</code> ---> <i>added in some formatting and cleaned up <code>README.md</code> with ideas/tasks/plans</i></li>
-                    <li><code> ----- ----- ----- ----- ----- </code></li>
-                    <li><code>[12:53am]</code> ---> <i></i></li>
-                    <li><code>[12:53am]</code> ---> <i></i></li>
                     <li><code> ===== ===== ===== ===== ===== </code></li>
                 </ul>
             </details>
         </li>
         <li><code>[21/06/23]</code> ---> <i></i>
-            <details>
-                <summary><i>show / hide</i></summary>
-                <ul>
-                    <li><code> ===== ===== ===== ===== ===== </code></li>
-                    <li><code>[00:00pm]</code> ---> <i></i></li>
-                    <li><code>[00:00pm]</code> ---> <i></i></li>
-                    <li><code> ----- ----- ----- ----- ----- </code></li>
-                    <li><code>[00:00pm]</code> ---> <i></i></li>
-                    <li><code>[00:00pm]</code> ---> <i></i></li>
-                    <li><code> ===== ===== ===== ===== ===== </code></li>
-                </ul>
-            </details>
-        </li>
         <li></li>
         <li></li>
     </ul>
@@ -262,18 +257,6 @@
                 </ul>
             </details>
         </li>
-        <li><code> ----- ----- ----- ----- ----- </code></li>
-        <li><code>[00/01/23][00:00xx]</code> ---> <i></i></li>
-        <li><code>[00/01/23][00:00xx]</code> ---> <i></i></li>
-        <li><code> ----- ----- ----- ----- ----- </code></li>
-        <li><code>[00/01/23][00:00xx]</code> ---> <i></i></li>
-        <li><code>[00/01/23][00:00xx]</code> ---> <i></i></li>
-        <li><code> ----- ----- ----- ----- ----- </code></li>
-        <li><code>[00/01/23][00:00xx]</code> ---> <i></i></li>
-        <li><code>[00/01/23][00:00xx]</code> ---> <i></i></li>
-        <li><code> ===== ===== ===== ===== ===== </code></li>
-    </ul>
-</details>
 
 <!-- ===================================================================================== -->
 <hr /><!-- =============================================================================== -->
