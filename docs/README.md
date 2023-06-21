@@ -18,8 +18,23 @@
 <h2> Brief </h2>
 
 * game jam for macquarie university
-  - Aurora Griffith (github.com/Corbeau217)
-  - Ivan Machamer (github.com/47128283)
+
+<ul>
+    <li><code>Ivan</code>
+        <ul>
+            <li><code>GITHUB</code> -- <code>https://github.com/47128283/</code></li>
+            <li><code>EMAIL</code> -- <code></code></li>
+            <li><code>DISCORD</code> -- <code>ivanisivan</code></li>
+        </ul>
+    </li>
+    <li><code>AURORA</code>
+        <ul>
+            <li><code>GITHUB</code> -- <code>https://github.com/corbeau217</code></li>
+            <li><code>EMAIL</code> -- <code>aurora.griffith@students.mq.edu.au</code></li>
+            <li><code>DISCORD</code> -- <code>deadbeef.c</code></li>
+        </ul>
+    </li>
+</ul>
 
 <!-- ===================================================================================== -->
 <hr /><!-- =============================================================================== -->
@@ -39,6 +54,9 @@
                     <li><code>[03:05pm]</code> ---> <i>restructure of project and fleshing out the classes</i></li>
                     <li><code> ----- ----- ----- ----- ----- </code></li>
                     <li><code>[03:26pm]</code> ---> <i><code>RoomGrid</code>, <code>MapGrid</code>, <code>MapCell</code>, <code>Stage</code> updates</i></li>
+                    <li><code> ----- ----- ----- ----- ----- </code></li>
+                    <li><code>[04:36pm]</code> ---> <i>did the presentation</i></li>
+                    <li><code>[05:05pm]</code> ---> <i>added in details to readme, added <code>Seedable</code>, began <code>RoomGrid</code></i></li>
                     <li><code> ----- ----- ----- ----- ----- </code></li>
                     <li><code>[00:00pm]</code> ---> <i></i></li>
                     <li><code>[00:00pm]</code> ---> <i></i></li>
