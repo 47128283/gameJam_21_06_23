@@ -1,7 +1,7 @@
 import java.awt.*;
 import java.util.Random;
 
-class MapCell{
+class MapCell extends Seedable{
     // the map cell seed instance
     public Random cellSeedInstance;
     
@@ -9,10 +9,6 @@ class MapCell{
     public char Type;
     public int row;
     public int col;
-
-    class walkable extends MapCell{
-        MapCell();
-    }
 
     MapCell(long s,char t, int c, int r) {
         final Random rand = new Random(s);
