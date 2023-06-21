@@ -3,6 +3,7 @@ import java.util.Map;
 import java.util.Random;
 
 class MapGrid{
+  // the see long
   public long mapSeed;
   public Random mapSeedInstance;
   // the rows and columns of our grid
