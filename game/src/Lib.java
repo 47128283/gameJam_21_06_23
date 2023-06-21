@@ -7,8 +7,8 @@ public class Lib {
     // // this is filled with the possible tiles this cell can take
     // protected static Tile[] TILE_OPTIONS = new Tile[Lib.TILE_COUNT];
 
-    // our random seeder
-    public static Random seed = new Random();
+    // // our random seeder
+    // public static Random seed = new Random();
 
 
     // // our placeholder fillers
@@ -39,7 +39,7 @@ public class Lib {
      * this is called by Stage when we do their constructor
      */
     public static void libMain(){
-        Lib.setupSeed(Main.seedLong);
+        // Lib.setupSeed(Main.seedLong);
         Lib.constructTiles();
     }
 
@@ -73,29 +73,29 @@ public class Lib {
         //     TILE_OPTIONS[idx++] = t;
     }
 
-    /**
-     * getting our seed
-     * @return return our seed
-     */
-    public static long getSeed(){
-        return Main.seedLong;
-    }
-    public static void setupSeed(long inSeed){
-        if(inSeed == 0) {
-            Main.seedLong = new Random().nextLong();
-            Lib.seed = new Random(Main.seedLong);
-        }
-        else
-            Lib.seed = new Random(inSeed);
-    }
+    // /**
+    //  * getting our seed
+    //  * @return return our seed
+    //  */
+    // public static long getSeed(){
+    //     return Main.seedLong;
+    // }
+    // public static void setupSeed(long inSeed){
+    //     if(inSeed == 0) {
+    //         Main.seedLong = new Random().nextLong();
+    //         Lib.seed = new Random(Main.seedLong);
+    //     }
+    //     else
+    //         Lib.seed = new Random(inSeed);
+    // }
 
-    /**
-     * used for randomising that isn't tied to generation
-     * @return : the random object
-     */
-    public static Random getRandom(){
-        return new Random();
-    }
+    // /**
+    //  * used for randomising that isn't tied to generation
+    //  * @return : the random object
+    //  */
+    // public static Random getRandom(){
+    //     return new Random();
+    // }
 
     /**
      * used for getting a random object by seed

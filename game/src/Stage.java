@@ -1,26 +1,26 @@
 import java.awt.Graphics;
-import java.util.Random;
 
 /**
  * instance of stage is the current game stage/client
  */
-class Stage {
-  // the seed we're using for our game
-  private static Random seedInstance = new Random();
-  public static long seedLong;
+class Stage extends Seedable{
+  // map grid instance of the current stage
   MapGrid mapgrid;
 
-
-  Stage() {
+  Stage(long seedIn) {
+    // use the seedable super construction
+    super(seedIn);
     // then get our mapgrid instance
-    mapgrid = new MapGrid();
-    // generate seed
-    seedLong = seedInstance.nextLong();
-    
+    mapgrid = new MapGrid(this.rollLong());
+
     // proclaim our seed
-    System.out.println("Stage using seed: "+seedLong);
+    System.out.println("Stage using seed: "+this.getSeedLong());
   }
 
+  /**
+   * @brief paints a frame of the stage
+   * @param g
+   */
   void paint(Graphics g) {
       mapgrid.paint(g);
   }
