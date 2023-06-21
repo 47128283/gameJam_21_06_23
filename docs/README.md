@@ -1,18 +1,160 @@
-## Getting Started
+<!-- ===================================================================================== -->
+<!-- ===================================================================================== -->
+<!--                                                                                       -->
+<!--        Project:    gameJam_21_06_23                                                   -->
+<!--         Branch:    main                                                               -->
+<!--        Created:    2023-06-21                                                         -->
+<!--    Last update:    2023-06-21                                                         -->
+<!--         Author:    47128283                                                           -->
+<!--                                                                                       -->
+<!--        Repo URL:                                                                      -->
+<!--         https://github.com/47128283/gameJam_21_06_23/                                 -->
+<!--                                                                                       -->
+<!-- ===================================================================================== -->
+<!-- ===================================================================================== -->
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+<h1> MQ Game Jam 21/Jun/2023 </h1>
 
-## Folder Structure
+<h2> Brief </h2>
 
-The workspace contains two folders by default, where:
+* game jam for macquarie university
+  - Aurora Griffith (github.com/Corbeau217)
+  - Ivan Machamer (github.com/47128283)
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+<!-- ===================================================================================== -->
+<hr /><!-- =============================================================================== -->
+<!-- ===================================================================================== -->
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+<h2>Notices / Changes</h2>
+<!-- notices / changes dropdown -->
+<details>
+    <summary><i>show / hide</i></summary>
+    <ul>
+        <li><code>[23/06/23]</code> ---> <i>init commit</i>
+            <details>
+                <summary><i>show / hide</i></summary>
+                <ul>
+                    <li><code> ===== ===== ===== ===== ===== </code></li>
+                    <li><code>[02:04pm]</code> ---> <i>setup repository and the <code>readme.md</code> file</i></li>
+                    <li><code>[00:00pm]</code> ---> <i></i></li>
+                    <li><code> ----- ----- ----- ----- ----- </code></li>
+                    <li><code>[00:00pm]</code> ---> <i></i></li>
+                    <li><code>[00:00pm]</code> ---> <i></i></li>
+                    <li><code> ===== ===== ===== ===== ===== </code></li>
+                </ul>
+            </details>
+        </li>
+        <li><code>[23/06/23]</code> ---> <i></i>
+            <details>
+                <summary><i>show / hide</i></summary>
+                <ul>
+                    <li><code> ===== ===== ===== ===== ===== </code></li>
+                    <li><code>[00:00pm]</code> ---> <i></i></li>
+                    <li><code>[00:00pm]</code> ---> <i></i></li>
+                    <li><code> ----- ----- ----- ----- ----- </code></li>
+                    <li><code>[00:00pm]</code> ---> <i></i></li>
+                    <li><code>[00:00pm]</code> ---> <i></i></li>
+                    <li><code> ===== ===== ===== ===== ===== </code></li>
+                </ul>
+            </details>
+        </li>
+        <li></li>
+        <li></li>
+    </ul>
+</details>
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+<!-- ===================================================================================== -->
+<hr /><!-- =============================================================================== -->
+<!-- ===================================================================================== -->
 
-## Dependency Management
+<h2>Plans</h2>
+<!-- Plans dropdown -->
+<details>
+    <summary><i>show / hide</i></summary>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</details>
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+<!-- ===================================================================================== -->
+<hr /><!-- =============================================================================== -->
+<!-- ===================================================================================== -->
+
+<h2>Ideas</h2>
+<!-- Ideas dropdown -->
+<details>
+    <summary><i>show / hide</i></summary>
+    <ul>
+        <li><code> ===== ===== ===== ===== ===== </code></li>
+        <li><code>[00/12/22][00:00xx]</code> ---> <i></i></li>
+        <li><code>[00/12/22][00:00xx]</code> ---> <i></i></li>
+        <li><code> ----- ----- ----- ----- ----- </code></li>
+        <li><code>[00/12/22][00:00xx]</code> ---> <i></i></li>
+        <li><code>[00/12/22][00:00xx]</code> ---> <i></i></li>
+        <li><code> ===== ===== ===== ===== ===== </code></li>
+    </ul>
+</details>
+
+<!-- ===================================================================================== -->
+<hr /><!-- =============================================================================== -->
+<!-- ===================================================================================== -->
+
+<h2>Tasks</h2>
+<!-- tasks dropdown -->
+<details>
+    <summary><i>show / hide</i></summary>
+    <ul>
+        <li><code> ===== ===== ===== ===== ===== </code></li>
+        <li><code>[00/01/23][00:00pm]</code> ---> <i></i>
+            <details>
+                <summary><i>[ show / hide ]</i></summary>
+                <ul>
+                    <li><i><code>Class</code> ----:</i>
+                        <ul>
+                            <li><i></i></li>
+                            <li><i></i></li>
+                            <li><i></i></li>
+                        </ul>
+                    </li>
+                </ul>
+            </details>
+        </li>
+        <li><code> ----- ----- ----- ----- ----- </code></li>
+        <li><code>[00/01/23][00:00xx]</code> ---> <i></i></li>
+        <li><code>[00/01/23][00:00xx]</code> ---> <i></i></li>
+        <li><code> ----- ----- ----- ----- ----- </code></li>
+        <li><code>[00/01/23][00:00xx]</code> ---> <i></i></li>
+        <li><code>[00/01/23][00:00xx]</code> ---> <i></i></li>
+        <li><code> ----- ----- ----- ----- ----- </code></li>
+        <li><code>[00/01/23][00:00xx]</code> ---> <i></i></li>
+        <li><code>[00/01/23][00:00xx]</code> ---> <i></i></li>
+        <li><code> ===== ===== ===== ===== ===== </code></li>
+    </ul>
+</details>
+
+<!-- ===================================================================================== -->
+<hr /><!-- =============================================================================== -->
+<!-- ===================================================================================== -->
+
+<h2>Issues</h2>
+<!-- Issues dropdown -->
+<details>
+    <summary><i>show / hide</i></summary>
+    <ul>
+        <li><code> ===== ===== ===== ===== ===== </code></li>
+        <li><code>[00/12/22][00:00xx]</code> ---> <i></i></li>
+        <li><code>[00/12/22][00:00xx]</code> ---> <i></i></li>
+        <li><code> ----- ----- ----- ----- ----- </code></li>
+        <li><code>[00/12/22][00:00xx]</code> ---> <i></i></li>
+        <li><code>[00/12/22][00:00xx]</code> ---> <i></i></li>
+        <li><code>[00/12/22][00:00xx]</code> ---> <i></i></li>
+        <li><code> ===== ===== ===== ===== ===== </code></li>
+    </ul>
+</details>
+
+<!-- ===================================================================================== -->
+<hr /><!-- =============================================================================== -->
+<!-- ===================================================================================== -->
