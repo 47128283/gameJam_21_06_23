@@ -2,7 +2,9 @@ import java.awt.*;
 import java.util.Random;
 
 class MapCell{
-
+    // the map cell seed instance
+    public Random cellSeedInstance;
+    
     public Color color;
     public char Type;
     public int row;
