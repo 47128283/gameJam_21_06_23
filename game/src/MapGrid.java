@@ -2,7 +2,7 @@ import java.awt.Graphics;
 import java.util.Map;
 import java.util.Random;
 
-class MapGrid{
+class MapGrid extends Seedable{
   // the see long
   public long mapSeed;
   public Random mapSeedInstance;
@@ -12,10 +12,8 @@ class MapGrid{
   MapCell[][] rooms;
 
   public MapGrid(long mapSeed){
-    // copy our map seed
-    this.mapSeed = mapSeed;
-    // get the map seed instance
-    mapSeedInstance = new Random(mapSeed);
+    // does our map seed stuff
+    super(mapSeed);
     // grab 2 randoms for the cols/rows
     mapSeedInstance.nextInt();mapSeedInstance.nextInt();
 
