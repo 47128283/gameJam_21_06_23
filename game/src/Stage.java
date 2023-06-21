@@ -1,6 +1,9 @@
 import java.awt.Graphics;
 import java.util.Random;
 
+/**
+ * instance of stage is the current game stage/client
+ */
 class Stage {
   // the seed we're using for our game
   private static Random seedInstance = new Random();
@@ -13,9 +16,9 @@ class Stage {
     mapgrid = new MapGrid();
     // generate seed
     seedLong = seedInstance.nextLong();
+    
     // proclaim our seed
     System.out.println("Stage using seed: "+seedLong);
-
   }
 
   void paint(Graphics g) {
