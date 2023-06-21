@@ -24,11 +24,11 @@ class MapGrid{
     // then fill out the cell seeds
     for(int i = 0; i < cellCountX; i++){
       for(int k = 0; k < cellCountY; k++){
-        rooms[i][k] = new MapCell(mapSeedInstance.nextLong(),0,i,k);
+        rooms[i][k] = new MapCell(mapSeedInstance.nextLong(),'\0',i,k);
       }
     }
 
-    
+
   }
   //...
   void paint(Graphics g) {
