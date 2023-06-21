@@ -38,6 +38,8 @@
                     <li><code>[02:04pm]</code> ---> <i>setup repository and the <code>readme.md</code> file</i></li>
                     <li><code>[03:05pm]</code> ---> <i>restructure of project and fleshing out the classes</i></li>
                     <li><code> ----- ----- ----- ----- ----- </code></li>
+                    <li><code>[03:26pm]</code> ---> <i><code>RoomGrid</code>, <code>MapGrid</code>, <code>MapCell</code>, <code>Stage</code> updates</i></li>
+                    <li><code> ----- ----- ----- ----- ----- </code></li>
                     <li><code>[00:00pm]</code> ---> <i></i></li>
                     <li><code>[00:00pm]</code> ---> <i></i></li>
                     <li><code> ===== ===== ===== ===== ===== </code></li>
