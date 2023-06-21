@@ -1,11 +1,13 @@
 import java.awt.Graphics;
-import java.util.Map;
+import java.util.Iterator;
 import java.util.Random;
 
-class MapGrid extends Seedable{
-  // the see long
-  public long mapSeed;
-  public Random mapSeedInstance;
+/**
+ * @brief is the object for which a game "map" is stored inside,
+ *        featuring a grid of "rooms" that the player can navigate.
+ *        Generated based on a provided seed.
+ */
+class MapGrid extends Seedable implements Iterable<MapCell>{
   // the rows and columns of our grid
   int cellCountX,cellCountY;
   // all our rooms
@@ -29,8 +31,20 @@ class MapGrid extends Seedable{
 
 
   }
+
   //...
   void paint(Graphics g) {
-    
+    //...
+  }
+
+  /**
+   * @override using the new genericable cell iterator based on
+   *            what was made by Damian during the Object Orientated
+   *            Programming Practices unit at MQU
+   */
+  @Override
+  public Iterator<MapCell> iterator() {
+    // make the iterator and return
+    return new CellIterator<MapCell>(rooms);
   }
 }

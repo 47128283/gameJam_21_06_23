@@ -77,6 +77,12 @@
                     <li><code> ----- ----- ----- ----- ----- </code></li>
                     <li><code>[07:52pm]</code> ---> <i>added in <code>PixelBox</code> implementatiion</i></li>
                     <li><code> ----- ----- ----- ----- ----- </code></li>
+                    <li><code>[10:54pm]</code> ---> <i>remade the <code>CellIterable&lt;T&gt;</code> class based on the one provided during OOPP unit with generics and null/empty protection</i></li>
+                    <li><code>[11:03pm]</code> ---> <i>confirmed splitting of <code>Lib.java</code> development to <code>CorbLib.java</code> and <code>IvanLib.java</code></i></li>
+                    <li><code>[11:03pm]</code> ---> <i>removed repeated code in <code>MapGrid</code></i></li>
+                    <li><code>[11:03pm]</code> ---> <i>commented out junk in <code>Lib.java</code></i></li>
+                    <li><code>[11:03pm]</code> ---> <i>created the <code>CorbLib.java</code> file</i></li>
+                    <li><code> ----- ----- ----- ----- ----- </code></li>
                     <li><code>[00:00pm]</code> ---> <i></i></li>
                     <li><code>[00:00pm]</code> ---> <i></i></li>
                     <li><code> ----- ----- ----- ----- ----- </code></li>
@@ -131,6 +137,23 @@
     <summary><i>show / hide</i></summary>
     <ul>
         <li><code> ===== ===== ===== ===== ===== </code></li>
+        <li><code>[21/06/23]</code> ---> <i>Aurora's ideas</i>
+            <details>
+                <summary><i>show / hide</i></summary>
+                <ul>
+                    <li><code> ===== ===== ===== ===== ===== </code></li>
+                    <li><code>[00:00pm]</code> ---> <i></i></li>
+                    <li><code> ----- ----- ----- ----- ----- </code></li>
+                    <li><code>[00:00pm]</code> ---> <i></i></li>
+                    <li><code>[00:00pm]</code> ---> <i></i></li>
+                    <li><code> ----- ----- ----- ----- ----- </code></li>
+                    <li><code>[00:00pm]</code> ---> <i></i></li>
+                    <li><code>[00:00pm]</code> ---> <i></i></li>
+                    <li><code> ===== ===== ===== ===== ===== </code></li>
+                </ul>
+            </details>
+        </li>
+        <li><code> ----- ----- ----- ----- ----- </code></li>
         <li><code>[00/12/22][00:00xx]</code> ---> <i></i></li>
         <li><code>[00/12/22][00:00xx]</code> ---> <i></i></li>
         <li><code> ----- ----- ----- ----- ----- </code></li>
