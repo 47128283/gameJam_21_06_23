@@ -52,7 +52,7 @@ class Main extends JFrame {
     public static void main(String[] args) throws Exception {
 
         GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
-        File cour = new File("data/cour.ttf");
+        File cour = new File("game/data/cour.ttf");
         ge.registerFont(Font.createFont(Font.TRUETYPE_FONT, cour));
         Main window = new Main();
         window.run();
