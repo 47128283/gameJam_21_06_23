@@ -32,6 +32,10 @@ class RoomGrid implements Iterable<RoomTile> {
         }
     }
 
+    protected RoomGrid(RoomType t) {
+        
+    }
+
     
 
     public List<Cell> cellsInRange(char c1, int r1, char c2, int r2) {

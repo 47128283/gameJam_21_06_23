@@ -3,7 +3,6 @@ import java.util.Random;
 
 class MapCell extends Seedable{
     // the map cell seed instance
-    public Random cellSeedInstance;
     
     public Color color;
     public char Type;
@@ -11,13 +10,15 @@ class MapCell extends Seedable{
     public int col;
 
     MapCell(long s,char t, int c, int r) {
-        final Random rand = new Random(s);
+        super(s);
         if(t == 0) {
 
         }
     }
 
-    MapCell() {}
+    MapCell() {
+        super(0);
+    }
     void paint(Graphics g) {
       
     }
