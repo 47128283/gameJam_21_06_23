@@ -23,7 +23,7 @@
     <li><code>Ivan</code>
         <ul>
             <li><code>GITHUB</code> -- <code>https://github.com/47128283/</code></li>
-            <li><code>EMAIL</code> -- <code></code></li>
+            <li><code>EMAIL</code> -- <code>ivan.machamer@students.mq.edu.au</code></li>
             <li><code>DISCORD</code> -- <code>ivanisivan</code></li>
         </ul>
     </li>
