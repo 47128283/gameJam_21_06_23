@@ -45,7 +45,7 @@
 <details>
     <summary><i>show / hide</i></summary>
     <ul>
-        <li><code>[23/06/23]</code> ---> <i>init commit</i>
+        <li><code>[21/06/23]</code> ---> <i>init commit</i>
             <details>
                 <summary><i>show / hide</i></summary>
                 <ul>
@@ -58,13 +58,26 @@
                     <li><code>[04:36pm]</code> ---> <i>did the presentation</i></li>
                     <li><code>[05:05pm]</code> ---> <i>added in details to readme, added <code>Seedable</code>, began <code>RoomGrid</code></i></li>
                     <li><code> ----- ----- ----- ----- ----- </code></li>
+                    <li><code>[05:18pm]</code> ---> <i>fixed date issue in readme and split for development</i></li>
+                    <li><code> ===== ===== ===== ===== ===== </code></li>
+                </ul>
+            </details>
+        </li>
+        <li><code>[21/06/23]</code> ---> <i></i>
+            <details>
+                <summary><i>show / hide</i></summary>
+                <ul>
+                    <li><code> ===== ===== ===== ===== ===== </code></li>
+                    <li><code>[00:00pm]</code> ---> <i></i></li>
+                    <li><code>[00:00pm]</code> ---> <i></i></li>
+                    <li><code> ----- ----- ----- ----- ----- </code></li>
                     <li><code>[00:00pm]</code> ---> <i></i></li>
                     <li><code>[00:00pm]</code> ---> <i></i></li>
                     <li><code> ===== ===== ===== ===== ===== </code></li>
                 </ul>
             </details>
         </li>
-        <li><code>[23/06/23]</code> ---> <i></i>
+        <li><code>[21/06/23]</code> ---> <i></i>
             <details>
                 <summary><i>show / hide</i></summary>
                 <ul>
