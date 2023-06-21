@@ -1,5 +1,5 @@
 import java.awt.*;
-public class RoomType {
+public abstract class RoomType {
     public String rooms;
     RoomType() {
         rooms = "";
@@ -8,33 +8,34 @@ public class RoomType {
     RoomType(String input) {
         rooms = input;
     }
-    private class LShape extends RoomType {
-        LShape() {
-            super("#**#**###");
-        }
-    }
+}
 
-    private class BackwardsLShape extends RoomType {
-        BackwardsLShape() {
-            super("**#**####");
-        }
+final class LShape extends RoomType {
+    LShape() {
+        super("#*##**###");
     }
+}
 
-    private class TShape extends RoomType {
-        TShape() {
-            super("***#*##*#");
-        }
+final class BackwardsLShape extends RoomType {
+    BackwardsLShape() {
+        super("#*#**####");
     }
+}
 
-    private class PlusShape extends RoomType {
-        PlusShape() {
-            super("#*#***#*#");
-        }
+final class TShape extends RoomType {
+    TShape() {
+        super("###***#*#");
     }
+}
 
-    private class LineShape extends RoomType {
-        LineShape() {
-            super("#*##*##*#");
-        }
+final class PlusShape extends RoomType {
+    PlusShape() {
+        super("#*#***#*#");
+    }
+}
+
+final class LineShape extends RoomType {
+    LineShape() {
+        super("#*##*##*#");
     }
 }

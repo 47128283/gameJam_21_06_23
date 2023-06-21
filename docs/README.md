@@ -124,36 +124,61 @@
 
 <h2>Tasks</h2>
 <!-- tasks dropdown -->
-<details>
-    <summary><i>show / hide</i></summary>
-    <ul>
-        <li><code> ===== ===== ===== ===== ===== </code></li>
-        <li><code>[00/01/23][00:00pm]</code> ---> <i></i>
+<li><code>[21/06/23][05:55pm]</code> ---> <i>Aurora</i>
             <details>
                 <summary><i>[ show / hide ]</i></summary>
                 <ul>
-                    <li><i><code>Class</code> ----:</i>
+                    <li><i><code>MapGrid</code> structure and implementation:</i>
                         <ul>
-                            <li><i></i></li>
-                            <li><i></i></li>
-                            <li><i></i></li>
+                            <li><code> ===== ===== ===== ===== ===== </code></li>
+                            <li><i>needs to have an iterable interface</i></li>
+                            <li><i>is given information by <code>Stage</code></i></li>
+                            <li><i>needs to hold the data for our rooms</i></li>
+                            <li><code> ----- ----- ----- ----- ----- </code></li>
+                            <li><i>hands off seed information to <code>MapCell</code></i></li>
+                            <li><i>needs to call to <code>MapCell.paint</code> for drawing the map view of rooms</i></li>
+                            <li><code> ===== ===== ===== ===== ===== </code></li>
+                        </ul>
+                    </li>
+                    <li><i><code>MapCell</code> structure and implementation:</i>
+                        <ul>
+                            <li><code> ===== ===== ===== ===== ===== </code></li>
+                            <li><i>given data/paint call from <code>MapGrid</code></i></li>
+                            <li><i>basis for <code>RoomGrid</code> object</i></li>
+                            <li><code> ===== ===== ===== ===== ===== </code></li>
                         </ul>
                     </li>
                 </ul>
             </details>
         </li>
         <li><code> ----- ----- ----- ----- ----- </code></li>
-        <li><code>[00/01/23][00:00xx]</code> ---> <i></i></li>
-        <li><code>[00/01/23][00:00xx]</code> ---> <i></i></li>
-        <li><code> ----- ----- ----- ----- ----- </code></li>
-        <li><code>[00/01/23][00:00xx]</code> ---> <i></i></li>
-        <li><code>[00/01/23][00:00xx]</code> ---> <i></i></li>
-        <li><code> ----- ----- ----- ----- ----- </code></li>
-        <li><code>[00/01/23][00:00xx]</code> ---> <i></i></li>
-        <li><code>[00/01/23][00:00xx]</code> ---> <i></i></li>
-        <li><code> ===== ===== ===== ===== ===== </code></li>
-    </ul>
-</details>
+        <li><code>[21/06/23][05:55pm]</code> ---> <i>Ivan</i>
+            <details>
+                <summary><i>[ show / hide ]</i></summary>
+                <ul>
+                    <li><i><code>RoomGrid</code> structure and implementation:</i>
+                        <ul>
+                            <li><code> ===== ===== ===== ===== ===== </code></li>
+                            <li><i>needs to have an iterable interface</i></li>
+                            <li><i>is given information by <code>MapGrid</code></i></li>
+                            <li><i>extends the <code>MapCell</code> object</i></li>
+                            <li><code> ----- ----- ----- ----- ----- </code></li>
+                            <li><i>hands off information to <code>RoomTile</code></i></li>
+                            <li><i>needs to call to <code>RoomTile.paint</code> for drawing the room tiles</i></li>
+                            <li><code> ===== ===== ===== ===== ===== </code></li>
+                        </ul>
+                    </li>
+                    <li><i><code>RoomTile</code> structure and implementation:</i>
+                        <ul>
+                            <li><code> ===== ===== ===== ===== ===== </code></li>
+                            <li><i>given data/paint call from <code>RoomGrid</code></i></li>
+                            <li><i>basis for a tile in a room object</i></li>
+                            <li><code> ===== ===== ===== ===== ===== </code></li>
+                        </ul>
+                    </li>
+                </ul>
+            </details>
+        </li>
 
 <!-- ===================================================================================== -->
 <hr /><!-- =============================================================================== -->

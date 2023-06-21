@@ -1,23 +1,24 @@
 import java.awt.*;
 
+import RoomType.TShape;
+import TileType.boundary;
+
 class RoomTile extends Rectangle {
     // RoomTile properties
-    protected static int size = RoomGrid.RoomTileSize;
-    protected char col;
+    protected static int size = RoomGrid.tileSize;
+    protected int col;
     protected int row;
-    protected final Color DEFAULT_COLOR = new Color(235,235,235);
-    protected Color bgColor;
-    protected String description;
+    protected TileType type;
 
     // // tile container
     // protected Tile tile;
 
-    public RoomTile(char inCol, int inRow, int inX, int inY) {
+    public RoomTile(int inCol, int inRow, int inX, int inY, char type) {
         super(inX, inY, size, size);
         col = inCol;
         row = inRow;
         // set the default bgColor
-        bgColor = DEFAULT_COLOR;
+
     }
 
     // handle RoomTile background
@@ -25,7 +26,7 @@ class RoomTile extends Rectangle {
         if (contains(mousePos)) {
             g.setColor(Color.GRAY);
         } else {
-            g.setColor(bgColor);
+            g.setColor(type.tileColor);
         }
         g.fillRect(x, y, size, size);
     }
@@ -66,8 +67,19 @@ class RoomTile extends Rectangle {
         }
     }
 
+    TileType setTileType(char t) {
+        switch(t) {
+            case '#':
+                return new Boundary();
+            case '*':
+                return new Walkable();
+            default:
+                return null;
+        }
+    }
+
     public int leftOfComparison(RoomTile c) {
-        return Character.compare(col, c.col);
+        return Integer.compare(col, c.col);
     }
 
     public int aboveComparison(RoomTile c) {
