@@ -63,7 +63,7 @@
                 </ul>
             </details>
         </li>
-        <li><code>[21/06/23]</code> ---> <i>Aurora's branch</i>
+        <li><code>[21/06/23]</code> ---> <i><code>Aurora</code>'s/<code>Corb</code>'s branch</i>
             <details>
                 <summary><i>show / hide</i></summary>
                 <ul>
@@ -82,12 +82,25 @@
                     <li><code>[11:03pm]</code> ---> <i>removed repeated code in <code>MapGrid</code></i></li>
                     <li><code>[11:03pm]</code> ---> <i>commented out junk in <code>Lib.java</code></i></li>
                     <li><code>[11:03pm]</code> ---> <i>created the <code>CorbLib.java</code> file</i></li>
+                    <li><code> ===== ===== ===== ===== ===== </code></li>
+                </ul>
+            </details>
+        </li>
+        <li><code>[22/06/23]</code> ---> <i><code>Aurora</code>'s/<code>Corb</code>'s branch</i>
+            <details>
+                <summary><i>show / hide</i></summary>
+                <ul>
+                    <li><code> ===== ===== ===== ===== ===== </code></li>
+                    <li><code>[12:53am]</code> ---> <i>restructure <code>MapGrid</code> to use the <code>Iterator</code> functionality</i></li>
+                    <li><code>[12:53am]</code> ---> <i>restructure <code>MapGrid</code> to handle painting</i></li>
+                    <li><code>[12:53am]</code> ---> <i>added in untracted randomisation to <code>CorbLib.java</code> (for use in cases where seeds arent provided)</i></li>
+                    <li><code>[12:53am]</code> ---> <i>added in setting up the courier font with try/catch handling</i></li>
+                    <li><code>[12:53am]</code> ---> <i>filled out <code>Main</code> including nested <code>App</code> object which contains the <code>Stage</code> instance</i></li>
+                    <li><code>[12:53am]</code> ---> <i>made the path of <code>Main</code>--&gt;<code>App</code>--&gt;<code>Stage</code>--&gt;<code>MapGrid</code> call/object structure</i></li>
+                    <li><code>[12:53am]</code> ---> <i>added in some formatting and cleaned up <code>README.md</code> with ideas/tasks/plans</i></li>
                     <li><code> ----- ----- ----- ----- ----- </code></li>
-                    <li><code>[00:00pm]</code> ---> <i></i></li>
-                    <li><code>[00:00pm]</code> ---> <i></i></li>
-                    <li><code> ----- ----- ----- ----- ----- </code></li>
-                    <li><code>[00:00pm]</code> ---> <i></i></li>
-                    <li><code>[00:00pm]</code> ---> <i></i></li>
+                    <li><code>[12:53am]</code> ---> <i></i></li>
+                    <li><code>[12:53am]</code> ---> <i></i></li>
                     <li><code> ===== ===== ===== ===== ===== </code></li>
                 </ul>
             </details>
@@ -120,8 +133,12 @@
 <details>
     <summary><i>show / hide</i></summary>
     <ul>
-        <li></li>
-        <li></li>
+        <li><i>merge branches for 22/6/23 day start</i></li>
+        <li><i>make working prototype with the object structure and basic details</i></li>
+        <li><i>add in stats display</i></li>
+        <li><i>add in input</i></li>
+        <li><i></i></li>
+        <li><i></i></li>
         <li></li>
         <li></li>
     </ul>
@@ -137,15 +154,22 @@
     <summary><i>show / hide</i></summary>
     <ul>
         <li><code> ===== ===== ===== ===== ===== </code></li>
-        <li><code>[21/06/23]</code> ---> <i>Aurora's ideas</i>
+        <li><code>[22/06/23]</code> ---> <i>Aurora's feature creeping</i>
             <details>
                 <summary><i>show / hide</i></summary>
                 <ul>
                     <li><code> ===== ===== ===== ===== ===== </code></li>
-                    <li><code>[00:00pm]</code> ---> <i></i></li>
+                    <li><code>[01:00am]</code> ---> <i>file handling for game data files (perhaps json files or just csv/txt?)</i></li>
+                    <li><code>[01:00am]</code> ---> <i>setting for the game, using a settings file</i></li>
+                    <li><code>[01:00am]</code> ---> <i>some way of checking the users display resolution to determine a default resolution</i></li>
                     <li><code> ----- ----- ----- ----- ----- </code></li>
-                    <li><code>[00:00pm]</code> ---> <i></i></li>
-                    <li><code>[00:00pm]</code> ---> <i></i></li>
+                    <li><code>[01:00am]</code> ---> <i>having it use image files without anti-aliasing instead of using rectangle shapes?</i></li>
+                    <li><code>[01:00am]</code> ---> <i>right click menu?</i></li>
+                    <li><code>[01:00am]</code> ---> <i>press a key to show the cost of things</i></li>
+                    <li><code>[01:00am]</code> ---> <i>items list that the character has</i></li>
+                    <li><code>[01:00am]</code> ---> <i>shop rooms?</i></li>
+                    <li><code>[01:00am]</code> ---> <i>npc?</i></li>
+                    <li><code>[01:00am]</code> ---> <i>perlin noise generation of somethiing idk?</i></li>
                     <li><code> ----- ----- ----- ----- ----- </code></li>
                     <li><code>[00:00pm]</code> ---> <i></i></li>
                     <li><code>[00:00pm]</code> ---> <i></i></li>
@@ -154,11 +178,11 @@
             </details>
         </li>
         <li><code> ----- ----- ----- ----- ----- </code></li>
-        <li><code>[00/12/22][00:00xx]</code> ---> <i></i></li>
-        <li><code>[00/12/22][00:00xx]</code> ---> <i></i></li>
+        <li><code>[22/06/23][00:00am]</code> ---> <code>person</code><i></i></li>
+        <li><code>[22/06/23][00:00am]</code> ---> <code>person</code><i></i></li>
         <li><code> ----- ----- ----- ----- ----- </code></li>
-        <li><code>[00/12/22][00:00xx]</code> ---> <i></i></li>
-        <li><code>[00/12/22][00:00xx]</code> ---> <i></i></li>
+        <li><code>[22/06/23][00:00am]</code> ---> <code>person</code><i></i></li>
+        <li><code>[22/06/23][00:00am]</code> ---> <code>person</code><i></i></li>
         <li><code> ===== ===== ===== ===== ===== </code></li>
     </ul>
 </details>
@@ -173,27 +197,36 @@
     <summary><i>show / hide</i></summary>
     <ul>
         <li><code> ===== ===== ===== ===== ===== </code></li>
-        <li><code>[21/06/23][05:55pm]</code> ---> <i>Aurora</i>
+        <li><code>[22/06/23][01:04am]</code> ---> <i>Aurora</i>
             <details>
                 <summary><i>[ show / hide ]</i></summary>
                 <ul>
-                    <li><i><code>MapGrid</code> structure and implementation:</i>
+                    <li><i>branch wide</i>
                         <ul>
                             <li><code> ===== ===== ===== ===== ===== </code></li>
-                            <li><i>needs to have an iterable interface</i></li>
-                            <li><i>is given information by <code>Stage</code></i></li>
-                            <li><i>needs to hold the data for our rooms</i></li>
-                            <li><code> ----- ----- ----- ----- ----- </code></li>
-                            <li><i>hands off seed information to <code>MapCell</code></i></li>
-                            <li><i>needs to call to <code>MapCell.paint</code> for drawing the map view of rooms</i></li>
+                            <li><i>merge with changes made by Ivan</i></li>
                             <li><code> ===== ===== ===== ===== ===== </code></li>
                         </ul>
                     </li>
-                    <li><i><code>MapCell</code> structure and implementation:</i>
+                    <li><i><code>MapGrid</code> tasks:</i>
                         <ul>
                             <li><code> ===== ===== ===== ===== ===== </code></li>
-                            <li><i>given data/paint call from <code>MapGrid</code></i></li>
-                            <li><i>basis for <code>RoomGrid</code> object</i></li>
+                            <li><i>check the base structure is done</i></li>
+                            <li><code> ===== ===== ===== ===== ===== </code></li>
+                        </ul>
+                    </li>
+                    <li><i><code>MapCell</code> tasks:</i>
+                        <ul>
+                            <li><code> ===== ===== ===== ===== ===== </code></li>
+                            <li><i>check the base structure is done</i></li>
+                            <li><code> ===== ===== ===== ===== ===== </code></li>
+                        </ul>
+                    </li>
+                    <li><i><code>Stage</code> tasks:</i>
+                        <ul>
+                            <li><code> ===== ===== ===== ===== ===== </code></li>
+                            <li><i>check the base structure is done</i></li>
+                            <li><i>add in <code>Player</code> instance holding</i></li>
                             <li><code> ===== ===== ===== ===== ===== </code></li>
                         </ul>
                     </li>

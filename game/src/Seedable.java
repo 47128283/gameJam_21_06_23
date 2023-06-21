@@ -52,5 +52,11 @@ public class Seedable {
     return seedInstance.nextLong(bound);
   }
 
-  
+  /**
+   * @brief only way to access the seed long for other people outside this class
+   * @return the seedLong value
+   */
+  public long getSeedLong(){
+    return seedLong;
+  }
 }

@@ -17,7 +17,7 @@ class MapGrid extends Seedable implements Iterable<MapCell>{
     // does our map seed stuff
     super(mapSeed);
     // grab 2 randoms for the cols/rows
-    mapSeedInstance.nextInt();mapSeedInstance.nextInt();
+    this.rollInt();this.rollInt(); // placeholder
 
     // make the rooms
     rooms = new MapCell[cellCountX][cellCountY];
@@ -25,16 +25,23 @@ class MapGrid extends Seedable implements Iterable<MapCell>{
     // then fill out the cell seeds
     for(int i = 0; i < cellCountX; i++){
       for(int k = 0; k < cellCountY; k++){
-        rooms[i][k] = new MapCell(mapSeedInstance.nextLong(),'\0',i,k);
+        rooms[i][k] = new MapCell(this.rollLong(),'\0',i,k);
       }
     }
 
 
   }
 
-  //...
+  /**
+   * @brief paint function for all cells in our grid
+   * @param g
+   */
   void paint(Graphics g) {
-    //...
+    // loop over all cells in our grid
+    for(MapCell c : this){
+      // paint it
+      c.paint(g);
+    }
   }
 
   /**
