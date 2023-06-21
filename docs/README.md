@@ -75,6 +75,8 @@
                     <li><code>[05:55pm]</code> ---> <i>added in tasks section</i></li>
                     <li><code>[06:25pm]</code> ---> <i>cleaned up <code>Seedable</code> and fleshed out implementation</i></li>
                     <li><code> ----- ----- ----- ----- ----- </code></li>
+                    <li><code>[07:52pm]</code> ---> <i>added in <code>PixelBox</code> implementatiion</i></li>
+                    <li><code> ----- ----- ----- ----- ----- </code></li>
                     <li><code>[00:00pm]</code> ---> <i></i></li>
                     <li><code>[00:00pm]</code> ---> <i></i></li>
                     <li><code> ----- ----- ----- ----- ----- </code></li>
