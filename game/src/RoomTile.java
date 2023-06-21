@@ -1,8 +1,5 @@
 import java.awt.*;
 
-import RoomType.TShape;
-import TileType.boundary;
-
 class RoomTile extends Rectangle {
     // RoomTile properties
     protected static int size = RoomGrid.tileSize;
