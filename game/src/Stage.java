@@ -1,16 +1,20 @@
 import java.awt.Graphics;
+import java.util.Random;
 
 class Stage {
   // the seed we're using for our game
-  Long currSeed;
+  private static Random seedInstance = new Random();
+  public static long seedLong;
   MapGrid mapgrid;
+
 
   Stage() {
     // then get our mapgrid instance
     mapgrid = new MapGrid();
-
+    // generate seed
+    seedLong = seedInstance.nextLong();
     // proclaim our seed
-    System.out.println("Stage using seed: "+Lib.getSeed());
+    System.out.println("Stage using seed: "+seedLong);
 
   }
 
