@@ -204,6 +204,7 @@
                     <li><i>branch wide</i>
                         <ul>
                             <li><code> ===== ===== ===== ===== ===== </code></li>
+                            <li><i>move the <code>charToColor</code> function to <code>CorbLib</code> then make a reference for it or something?</i></li>
                             <li><i>merge with changes made by Ivan</i></li>
                             <li><code> ===== ===== ===== ===== ===== </code></li>
                         </ul>
