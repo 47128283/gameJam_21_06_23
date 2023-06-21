@@ -24,81 +24,15 @@ class RoomGrid implements Iterable<RoomTile> {
         // setup the cells
         for (int i = 0; i < tiles.length; i++) {
             for (int j = 0; j < tiles[i].length; j++) {
-                char c = colToLabel(i);
+                int t = ;
                 int x = horizMargin + cellSize * i;
                 int y = vertiMargin + cellSize * j;
-                tiles[i][j] = new RoomTile(c, j, x, y);
+                tiles[i][j] = new RoomTile(t, j, x, y);
             }
         }
-        // get our GridBuilder list of indexes
-        // int[][] builtGrid = GridBuilder.buildGrid();
-
-        // // make sure we caught a big one
-        // if(builtGrid != null){
-        //     // now run through and attempt to build our grid
-        //     for (int x = 0; x < colCount; x++){
-        //         for(int y = 0; y < rowCount; y++){
-        //             // get index from our builtGrid
-        //             int idx = builtGrid[x][y];
-        //             // handle error tile
-        //             if(idx == -1)
-        //                 cells[x][y].setTile(Lib.errorTile());
-        //             else // otherwise handle tile option
-        //                 cells[x][y].setTile(Lib.TILE_OPTIONS[idx]);
-
-        //         }
-        //     }
-        // }
-        // else{
-        //     // assign all cell.tile to error tile and scream?
-        //     // TODO : handle when we werent able to build i guess?
-        //     System.err.println("Failed to build grid, GridBuilder.buildGrid(); returned a null");
-        // }
-
-
     }
 
-    protected static Grid uniqueGrid; // singleton grid reference
-    public static Grid getInstance() {
-        if(Grid.uniqueGrid == null)
-            Grid.uniqueGrid = new Grid();
-        return Grid.uniqueGrid;
-    }
-
-    private char colToLabel(int col) {
-        return (char) (col + 65);
-    }
-
-    private int labelToCol(char col) {
-        return (int) col - 65;
-    }
-
-    public void paint(Graphics g, Point mousePos) {
-        doToEachCell((Cell c) -> c.paint(g, mousePos));
-    }
-
-    private Optional<Cell> cellAtColRow(int c, int r) {
-        if (c >= 0 && c < cells.length && r >= 0 && r < cells[c].length) {
-            return Optional.of(cells[c][r]);
-        } else {
-            return Optional.empty();
-        }
-    }
-
-    public Optional<Cell> cellAtColRow(char c, int r) {
-        return cellAtColRow(labelToCol(c), r);
-    }
-
-    public Optional<Cell> cellAtPoint(Point p) {
-        for (int i = 0; i < cells.length; i++) {
-            for (int j = 0; j < cells[i].length; j++) {
-                if (cells[i][j].contains(p)) {
-                    return Optional.of(cells[i][j]);
-                }
-            }
-        }
-        return Optional.empty();
-    }
+    
 
     public List<Cell> cellsInRange(char c1, int r1, char c2, int r2) {
         int c1i = labelToCol(c1);
@@ -169,49 +103,4 @@ class RoomGrid implements Iterable<RoomTile> {
         }
         return retval;
     }
-
-
-    // /**
-    //  * @param dirIdx : ajacent array direction index
-    //  * @return x idx change
-    //  */
-    // public static int dirX(int dirIdx){
-    //     switch(dirIdx){
-    //         case 0:
-    //         case 4:
-    //         default:
-    //             return 0;
-    //         case 1:
-    //         case 2:
-    //         case 3:
-    //             return 1;
-    //         case 5:
-    //         case 6:
-    //         case 7:
-    //             return -1;
-    //     }
-    // }
-
-    // /**
-    //  * @param dirIdx : ajacent array direction index
-    //  * @return y idx change
-    //  */
-    // public static int dirY(int dirIdx){
-    //     switch(dirIdx){
-    //         case 0:
-    //         case 1:
-    //         case 7:
-    //             return -1;
-    //         case 2:
-    //         case 6:
-    //         default:
-    //             return 0;
-    //         case 3:
-    //         case 4:
-    //         case 5:
-    //             return 1;
-    //     }
-    // }
-
-
 }
