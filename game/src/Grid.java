@@ -16,8 +16,8 @@ class Grid implements Iterable<Cell> {
     // probably dont change these at runtime tho until
     // you have something to handle the change in array
     public static int cellSize = 35;
-    public static int colCount = 25;
-    public static int rowCount = 20;
+    public static int colCount = 7;
+    public static int rowCount = 7;
     public static int horizMargin = 10;
     public static int vertiMargin = 10;
 
