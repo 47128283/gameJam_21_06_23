@@ -4,13 +4,15 @@ public class RoomTile {
     public char drawnType;
     private char actualType; 
     public char itemType;
+    Random r = new Random();
 
     RoomTile(boolean s, char dt, char at, Character it){ //given type
         
     }
 
     RoomTile(){ //randomly generated
-        Random r = new Random();
-        
+        actualType = (char)r.nextInt(15);
+        drawnType = 0;
+
     }
 }
