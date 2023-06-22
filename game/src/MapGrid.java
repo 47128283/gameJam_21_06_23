@@ -14,6 +14,7 @@ class MapGrid extends Seedable implements Iterable<MapCell>{
   public static int horizMargin = 10, vertiMargin = 10;
   // positioiniing of the mapgrid
   int x,y;
+  int gridDiam;
   // the rows and columns of our grid
   int cellCountX,cellCountY;
   // all our rooms
@@ -28,6 +29,8 @@ class MapGrid extends Seedable implements Iterable<MapCell>{
     x = horizMargin; y = vertiMargin;
     cellCountX = 3;
     cellCountY = 3;
+    // stash the sizing
+    gridDiam = sizeIn;
     int cellDiam = sizeIn/cellCountX;
     // grab 2 randoms for the cols/rows
     this.rollInt();this.rollInt(); // placeholder
@@ -63,6 +66,26 @@ class MapGrid extends Seedable implements Iterable<MapCell>{
     for(MapCell c : this){
       // paint it
       c.paint(g,mousePos);
+      if(c.contains(mousePos)){
+        paintOverlay(g, List.of(c), Lib.getOverlayColor());
+      }
+    }
+  }
+
+
+  public boolean contains(Point p) {
+    if (p != null) {
+      return (
+        (
+          ( this.x<=p.x) && ( this.y<=p.y )
+        ) &&
+        (
+        ( (this.x+this.gridDiam)>=p.x ) && ( (this.y+this.gridDiam)>=p.y )
+
+        )
+      );
+    } else {
+      return false;
     }
   }
   
@@ -78,7 +101,7 @@ class MapGrid extends Seedable implements Iterable<MapCell>{
     for (MapCell t : cellListIn) {
       Lib.drawBox(
           g,
-          x+t.x + MapCell.horizMargin, y+t.y + MapCell.vertiMargin,
+          t.x + MapCell.horizMargin, t.y + MapCell.vertiMargin,
           t.diam - (MapCell.horizMargin*2), t.diam - (MapCell.vertiMargin*2),
           overlayColor
         );

@@ -432,6 +432,10 @@ public class Lib {
     return null;
   }
 
+  public static Color getOverlayColor() {
+    return new Color(0x1d/255.0f,0x29/255.0f,0x51/255.0f,0.25f);
+  }
+
 
 
 

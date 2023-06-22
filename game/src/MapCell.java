@@ -56,6 +56,23 @@ class MapCell extends Seedable{
         y = MapGrid.vertiMargin + rowIn*diam;
     }
 
+
+    public boolean contains(Point p) {
+      if (p != null) {
+        return (
+          (
+            ( this.x<=p.x) && ( this.y<=p.y )
+          ) &&
+          (
+          ( (this.x+this.diam)>=p.x ) && ( (this.y+this.diam)>=p.y )
+
+          )
+        );
+      } else {
+        return false;
+      }
+    }
+
     /**
      * @brief basic paint method for our map cell
      * @param g the graphics object
