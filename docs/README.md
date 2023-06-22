@@ -310,7 +310,7 @@
                     <li><code>[03:21pm]</code> ---> <i>fiiinished adding in the types sorta?</li>
                     <li><code>[03:21pm]</code> ---> <i>started the room strings section</li>
                     <li><code> ----- ----- ----- ----- ----- </code></li>
-                    <li><code>[00:00pm]</code> ---> <i></i></li>
+                    <li><code>[06:52pm]</code> ---> <i>ported all <code>CorbLib</code> into <code>Lib</code></li>
                     <li><code> ===== ===== ===== ===== ===== </code></li>
                 </ul>
             </details>

@@ -27,7 +27,7 @@ class RoomTile extends Rectangle {
     // general tile painter method called from Grid class
     void paint(Graphics g, Point mousePos) {
       // draw a box by the thing in lib
-      CorbLib.drawBox(g, x, y, width, height, CorbLib.getTileColor(drawnType));
+      Lib.drawBox(g, x, y, width, height, Lib.getTileColor(drawnType));
     }
 
     @Override

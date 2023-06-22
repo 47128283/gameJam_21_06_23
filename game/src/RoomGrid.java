@@ -35,7 +35,7 @@ class RoomGrid extends MapCell implements Iterable<RoomTile> {
                 int x = horizMargin + tileSize * i;
                 int y = vertiMargin + tileSize * j;
                 // tiles[i][j] = new RoomTile(i, j, x, y,'#');
-                tiles[i][j] = new RoomTile(i, j, x, y, CorbLib.getDefault_tileByRoomType(this.type));
+                tiles[i][j] = new RoomTile(i, j, x, y, Lib.getDefault_tileByRoomType(this.type));
             }
         }
     }
@@ -68,8 +68,8 @@ class RoomGrid extends MapCell implements Iterable<RoomTile> {
         // make seedable instance by seed
         super(seedIn, typeIn, colIn, rowIn);
         // fetch the room string
-        roomBaseString = CorbLib.getRoomStringByType(typeIn);
-        int roomSize = CorbLib.getSizeByStringLength(roomBaseString.length());
+        roomBaseString = Lib.getRoomStringByType(typeIn);
+        int roomSize = Lib.getSizeByStringLength(roomBaseString.length());
         colCount = roomSize; rowCount = roomSize;
         // make the tiles arrays
         tiles = new RoomTile[colCount][rowCount];
@@ -111,7 +111,7 @@ class RoomGrid extends MapCell implements Iterable<RoomTile> {
     public void paintOverlay(Graphics g, List<RoomTile> tileListIn, Color overlayColor) {
       // loop all tiles iin the list
       for (RoomTile t : tileListIn) {
-        CorbLib.drawBox(g, t.x + 2, t.y + 2, t.width - 4, t.height - 4, overlayColor);
+        Lib.drawBox(g, t.x + 2, t.y + 2, t.width - 4, t.height - 4, overlayColor);
       }
     }
 

@@ -51,7 +51,7 @@ class Main extends JFrame{
       // pat ourself on the back for electing ourself as mouse listener
       this.addMouseListener(this);
       // make new stage by random untracked long
-      stage = new Stage(CorbLib.getUntrackedRandomLong());
+      stage = new Stage(Lib.getUntrackedRandomLong());
     }
 
     /* ================================================================= */
@@ -133,8 +133,11 @@ class Main extends JFrame{
    * @param args
    */
   public static void main(String[] args){
+    // prepare lib stuffs
+    Lib.libmain(args);
     // prepare corblib stuffs
     CorbLib.corblibmain(args);
+
 
     // setup and run window
     Main window = new Main(600,400);

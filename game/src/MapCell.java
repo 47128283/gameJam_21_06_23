@@ -45,7 +45,7 @@ class MapCell extends Seedable{
      */
     MapCell() {
         // you didnt provide a seed, get heckd
-        super(CorbLib.getUntrackedRandomLong());
+        super(Lib.getUntrackedRandomLong());
         // say to draw the base by default
         drawBase = true;
 
@@ -53,7 +53,7 @@ class MapCell extends Seedable{
         this.col = -1;
         this.row = -1;
         // room type stuff
-        this.type = CorbLib.getDefault_MapCellType();
+        this.type = Lib.getDefault_MapCellType();
     }
 
     /**

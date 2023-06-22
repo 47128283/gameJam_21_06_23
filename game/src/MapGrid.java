@@ -31,7 +31,7 @@ class MapGrid extends Seedable implements Iterable<MapCell>{
     // then fill out the cell seeds
     for(int i = 0; i < cellCountX; i++){
       for(int k = 0; k < cellCountY; k++){
-        char currCellType = CorbLib.getDefault_MapCellType();
+        char currCellType = Lib.getDefault_MapCellType();
         rooms[i][k] = new MapCell(this.rollLong(),currCellType,i,k);
       }
     }
@@ -61,7 +61,7 @@ class MapGrid extends Seedable implements Iterable<MapCell>{
   public void paintOverlay(Graphics g, List<MapCell> cellListIn, Color overlayColor) {
     // loop all tiles iin the list
     for (MapCell t : cellListIn) {
-      CorbLib.drawBox(g, x+t.x + 2, y+t.y + 2, t.diam - 4, t.diam - 4, overlayColor);
+      Lib.drawBox(g, x+t.x + 2, y+t.y + 2, t.diam - 4, t.diam - 4, overlayColor);
     }
   }
 
