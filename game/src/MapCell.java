@@ -1,25 +1,86 @@
 import java.awt.*;
-import java.util.Random;
+// import java.util.Random;
 
 class MapCell extends Seedable{
-    // the map cell seed instance
+    // parent space origin
+    Point parentSpaceOrigin;
     
-    public Color color;
-    public char Type;
-    public int row;
-    public int col;
+    // relative position of the cell to parent space
+    public int relX,relY;
+    // diameter of the cell
+    public int diam;
 
-    MapCell(long s,char t, int c, int r) {
-        super(s);
-        if(t == 0) {
+    // the colourings of this cell
+    public Color bgColor,lineColor;
 
-        }
+    // the store for what type this cell is
+    public char type;
+
+    // grid position information
+    public int row,col;
+
+    // whether we draw the bg/outline stuff
+    public boolean drawBase;
+
+    /**
+     * @brief constructor with informatiion
+     * @param seedIn the seed for this cell
+     * @param typeIn the type for this cell
+     * @param colIn the col this cell is
+     * @param rowIn the row this cell is
+     */
+    MapCell(long seedIn,char typeIn, int colIn, int rowIn) {
+        // hand off for seedable setup
+        super(seedIn);
+        // say to draw the base by default
+        drawBase = true;
+        // possitioning in the map grid
+        this.col = colIn;
+        this.row = rowIn;
+        // room type stuff
+        this.type = typeIn;
+
     }
 
+    /**
+     * @brief default constructor
+     * @warning thiiss uses an untrack seed!
+     */
     MapCell() {
-        super(0);
+        // you didnt provide a seed, get heckd
+        super(CorbLib.getUntrackedRandomLong());
+        // say to draw the base by default
+        drawBase = true;
+
+        // possitioning in the map grid
+        this.col = -1;
+        this.row = -1;
+        // room type stuff
+        this.type = CorbLib.getDefault_MapCellType();
     }
-    void paint(Graphics g) {
-      
+
+    /**
+     * @brief basic paint method for our map cell
+     * @param g the graphics object
+     * @param mousePos the pos of mouse
+     */
+    void paint(Graphics g, Point mousePos) {
+        // return if we shouldnt paint the background
+        if(!drawBase) return;
+        
+        // bg color
+        g.setColor(bgColor);
+        // background
+        g.fillRect(
+            (int)(relX+parentSpaceOrigin.getX()), (int)(relY+parentSpaceOrigin.getX()),
+            diam, diam
+        );
+        // outline color
+        g.setColor(lineColor);
+        // outline
+        g.drawRect(
+            (int)(relX+parentSpaceOrigin.getX()), (int)(relY+parentSpaceOrigin.getX()),
+            diam, diam
+        );
     }
   }

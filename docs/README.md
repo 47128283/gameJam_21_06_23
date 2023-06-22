@@ -123,7 +123,19 @@
                     <li><code>[10:00am]</code> ---> <i>creating branch and updating readme to reflect</i></li>
                     <li><code>[10:01am]</code> ---> <i>began work on trawling through code for any issues before beginning further tasks</i></li>
                     <li><code> ----- ----- ----- ----- ----- </code></li>
-                    <li><code>[00:00am]</code> ---> <i></i></li>
+                    <li><code>[10:13am]</code> ---> <i>cleaned up some implementation conflicts in <code>RoomGrid.java</code></i></li>
+                    <li><code> ----- ----- ----- ----- ----- </code></li>
+                    <li><code>[11:40am]</code> ---> <i>refactored <code>MapGrid</code>, <code>MapCell</code>, <code>RoomGrid</code>, <code>RoomTile</code>:</i>
+                      <ul>
+                        <li><i>to have correct constructor usage</i></li>
+                        <li><i>to use <code>mousePos</code> paint function parameter</i></li>
+                        <li><i>to have the type be stored in the structure</i></li>
+                        <li><i>to then correctly use iterable and placeholders</i></li>
+                        <li><i>cleaned up <code>toString()</code> functions</i></li>
+                      </ul>
+                    </li>
+                    <li><code>[11:40am]</code> ---> <i>fixed up <code>settings.json</code> location and cleaned ammended indentation</i></li>
+                    <li><code>[11:40am]</code> ---> <i>commiting changes before working on tidying up indentation</i></li>
                     <li><code> ----- ----- ----- ----- ----- </code></li>
                     <li><code>[00:00am]</code> ---> <i></i></li>
                     <li><code>[00:00am]</code> ---> <i></i></li>
@@ -221,74 +233,62 @@
 <h2>Tasks</h2>
 <!-- tasks dropdown -->
 <details>
-    <summary><i>show / hide</i></summary>
-    <ul>
-        <li><code> ===== ===== ===== ===== ===== </code></li>
-        <li><code>[22/06/23][01:04am]</code> ---> <i>Aurora</i>
-            <details>
-                <summary><i>[ show / hide ]</i></summary>
-                <ul>
-                    <li><i>branch wide</i>
-                        <ul>
-                            <li><code> ===== ===== ===== ===== ===== </code></li>
-                            <li><i>move the <code>charToColor</code> function to <code>CorbLib</code> then make a reference for it or something?</i></li>
-                            <li><i>merge with changes made by Ivan</i></li>
-                            <li><code> ===== ===== ===== ===== ===== </code></li>
-                        </ul>
-                    </li>
-                    <li><i><code>MapGrid</code> tasks:</i>
-                        <ul>
-                            <li><code> ===== ===== ===== ===== ===== </code></li>
-                            <li><i>check the base structure is done</i></li>
-                            <li><code> ===== ===== ===== ===== ===== </code></li>
-                        </ul>
-                    </li>
-                    <li><i><code>MapCell</code> tasks:</i>
-                        <ul>
-                            <li><code> ===== ===== ===== ===== ===== </code></li>
-                            <li><i>check the base structure is done</i></li>
-                            <li><code> ===== ===== ===== ===== ===== </code></li>
-                        </ul>
-                    </li>
-                    <li><i><code>Stage</code> tasks:</i>
-                        <ul>
-                            <li><code> ===== ===== ===== ===== ===== </code></li>
-                            <li><i>check the base structure is done</i></li>
-                            <li><i>add in <code>Player</code> instance holding</i></li>
-                            <li><code> ===== ===== ===== ===== ===== </code></li>
-                        </ul>
-                    </li>
-                </ul>
-            </details>
-        </li>
-        <li><code> ----- ----- ----- ----- ----- </code></li>
-        <li><code>[21/06/23][05:55pm]</code> ---> <i>Ivan</i>
-            <details>
-                <summary><i>[ show / hide ]</i></summary>
-                <ul>
-                    <li><i><code>RoomGrid</code> structure and implementation:</i>
-                        <ul>
-                            <li><code> ===== ===== ===== ===== ===== </code></li>
-                            <li><i>needs to have an iterable interface</i></li>
-                            <li><i>is given information by <code>MapGrid</code></i></li>
-                            <li><i>extends the <code>MapCell</code> object</i></li>
-                            <li><code> ----- ----- ----- ----- ----- </code></li>
-                            <li><i>hands off information to <code>RoomTile</code></i></li>
-                            <li><i>needs to call to <code>RoomTile.paint</code> for drawing the room tiles</i></li>
-                            <li><code> ===== ===== ===== ===== ===== </code></li>
-                        </ul>
-                    </li>
-                    <li><i><code>RoomTile</code> structure and implementation:</i>
-                        <ul>
-                            <li><code> ===== ===== ===== ===== ===== </code></li>
-                            <li><i>given data/paint call from <code>RoomGrid</code></i></li>
-                            <li><i>basis for a tile in a room object</i></li>
-                            <li><code> ===== ===== ===== ===== ===== </code></li>
-                        </ul>
-                    </li>
-                </ul>
-            </details>
-        </li>
+  <summary><i>show / hide</i></summary>
+  <ul>
+    <li><code> ===== ===== ===== ===== ===== </code></li>
+    <li><code>[22/06/23][01:04am]</code> ---> <i>Aurora</i>
+      <details>
+        <summary><i>[ show / hide ]</i></summary>
+        <ul>
+          <li><i>branch wide</i>
+            <ul>
+              <li><code> ===== ===== ===== ===== ===== </code></li>
+              <li><i>move the <code>charToColor</code> function to <code>CorbLib</code> then make a reference for it or something?</i></li>
+              <li><code> ===== ===== ===== ===== ===== </code></li>
+            </ul>
+          </li>
+          <li><i><code>Stage</code> tasks:</i>
+            <ul>
+              <li><code> ===== ===== ===== ===== ===== </code></li>
+              <li><i>add in <code>Player</code> instance holding</i></li>
+              <li><code> ===== ===== ===== ===== ===== </code></li>
+            </ul>
+          </li>
+        </ul>
+      </details>
+    </li>
+    <li><code> ----- ----- ----- ----- ----- </code></li>
+    <li><code>[22/06/23][11:46am]</code> ---> <i>Ivan</i>
+      <details>
+        <summary><i>[ show / hide ]</i></summary>
+        <ul>
+          <li><i><code>---</code> undefined:</i>
+            <ul>
+              <li><code> ===== ===== ===== ===== ===== </code></li>
+              <li><i></i></li>
+              <li><i></i></li>
+              <li><code> ----- ----- ----- ----- ----- </code></li>
+              <li><i></i></li>
+              <li><i></i></li>
+              <li><code> ===== ===== ===== ===== ===== </code></li>
+            </ul>
+          </li>
+          <li><i><code>---</code> undefined:</i>
+            <ul>
+              <li><code> ===== ===== ===== ===== ===== </code></li>
+              <li><i></i></li>
+              <li><i></i></li>
+              <li><code> ----- ----- ----- ----- ----- </code></li>
+              <li><i></i></li>
+              <li><i></i></li>
+              <li><code> ===== ===== ===== ===== ===== </code></li>
+            </ul>
+          </li>
+        </ul>
+      </details>
+    </li>
+  </ul>
+</details>
 
 <!-- ===================================================================================== -->
 <hr /><!-- =============================================================================== -->
@@ -297,17 +297,17 @@
 <h2>Issues</h2>
 <!-- Issues dropdown -->
 <details>
-    <summary><i>show / hide</i></summary>
-    <ul>
-        <li><code> ===== ===== ===== ===== ===== </code></li>
-        <li><code>[00/12/22][00:00xx]</code> ---> <i></i></li>
-        <li><code>[00/12/22][00:00xx]</code> ---> <i></i></li>
-        <li><code> ----- ----- ----- ----- ----- </code></li>
-        <li><code>[00/12/22][00:00xx]</code> ---> <i></i></li>
-        <li><code>[00/12/22][00:00xx]</code> ---> <i></i></li>
-        <li><code>[00/12/22][00:00xx]</code> ---> <i></i></li>
-        <li><code> ===== ===== ===== ===== ===== </code></li>
-    </ul>
+  <summary><i>show / hide</i></summary>
+  <ul>
+    <li><code> ===== ===== ===== ===== ===== </code></li>
+    <li><code>[00/12/22][00:00xx]</code> ---> <i></i></li>
+    <li><code>[00/12/22][00:00xx]</code> ---> <i></i></li>
+    <li><code> ----- ----- ----- ----- ----- </code></li>
+    <li><code>[00/12/22][00:00xx]</code> ---> <i></i></li>
+    <li><code>[00/12/22][00:00xx]</code> ---> <i></i></li>
+    <li><code>[00/12/22][00:00xx]</code> ---> <i></i></li>
+    <li><code> ===== ===== ===== ===== ===== </code></li>
+  </ul>
 </details>
 
 <!-- ===================================================================================== -->

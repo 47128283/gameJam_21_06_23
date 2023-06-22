@@ -1,4 +1,5 @@
 import java.awt.Graphics;
+import java.awt.Point;
 
 /**
  * instance of stage is the current game stage/client
@@ -21,8 +22,8 @@ class Stage extends Seedable{
    * @brief paints a frame of the stage
    * @param g
    */
-  void paint(Graphics g) {
-      mapgrid.paint(g);
+  void paint(Graphics g, Point mousePos) {
+    mapgrid.paint(g, mousePos);
   }
   
 }

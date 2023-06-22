@@ -11,6 +11,7 @@ class RoomTile extends Rectangle {
     // protected Tile tile;
 
     public RoomTile(int inCol, int inRow, int inX, int inY, char type) {
+        // rectangle super construction
         super(inX, inY, size, size);
         col = inCol;
         row = inRow;
@@ -84,6 +85,6 @@ class RoomTile extends Rectangle {
     }
 
     public String toString() {
-        return Character.toString(col) + Integer.toString(row) + ":" + description;
+        return Character.toString(col) + Integer.toString(row) + ":" /*+ description*/;
     }
 }

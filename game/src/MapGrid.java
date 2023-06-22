@@ -1,4 +1,5 @@
 import java.awt.Graphics;
+import java.awt.Point;
 import java.util.Iterator;
 import java.util.Random;
 
@@ -25,7 +26,8 @@ class MapGrid extends Seedable implements Iterable<MapCell>{
     // then fill out the cell seeds
     for(int i = 0; i < cellCountX; i++){
       for(int k = 0; k < cellCountY; k++){
-        rooms[i][k] = new MapCell(this.rollLong(),'\0',i,k);
+        char currCellType = CorbLib.getDefault_MapCellType();
+        rooms[i][k] = new MapCell(this.rollLong(),currCellType,i,k);
       }
     }
 
@@ -36,11 +38,11 @@ class MapGrid extends Seedable implements Iterable<MapCell>{
    * @brief paint function for all cells in our grid
    * @param g
    */
-  void paint(Graphics g) {
+  void paint(Graphics g, Point mousePos) {
     // loop over all cells in our grid
     for(MapCell c : this){
       // paint it
-      c.paint(g);
+      c.paint(g,mousePos);
     }
   }
 

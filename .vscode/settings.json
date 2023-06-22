@@ -1,0 +1,45 @@
+{
+  "java.project.sourcePaths": ["game/src"],
+  "java.project.outputPath": "bin",
+  "editor.detectIndentation": false,
+  "editor.tabSize": 2,
+  "editor.indentSize": "tabSize",
+  "todo-tree.general.tags": [
+    "BUG",
+    "HACK",
+    "FIXME",
+    "TODO",
+    "XXX",
+    "[ ]",
+    "[x]",
+    "IDEA",
+    "ISSUE",
+    "NOTICE"
+  ],
+  "todo-tree.highlights.customHighlight": {
+    "TODO": {
+      "background": "#FF6347",
+      "iconColour": "#FF6347"
+    },
+    "IDEA": {
+      "background": "#87CEFA",
+      "iconColour": "#87CEFA"
+    },
+    "NOTICE": {
+      "background": "#2E8B57",
+      "iconColour": "#2E8B57"
+    },
+    "BUG": {
+      "icon": "bug"
+    },
+    "HACK": {
+      "icon": "tools"
+    },
+    "FIXME": {
+      "icon": "flame"
+    },
+    "XXX": {
+      "icon": "$(close)"
+    }
+  },
+}
