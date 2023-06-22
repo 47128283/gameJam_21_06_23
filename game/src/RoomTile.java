@@ -40,7 +40,7 @@ class RoomTile extends Rectangle {
       // draw a box by the thing in lib
       int xsize = 400/3/3;
       int ysize = 400/3/3;
-      Lib.drawBox(g, (xsize*(mRow*3))+(xsize*row), (ysize*(mCol*3))+(ysize*col), xsize, ysize,  Lib.getTileColor(hiddenType));
+      Lib.drawBox(g, MapGrid.horizMargin+1+(xsize*(mRow*3))+(xsize*row), MapGrid.vertiMargin+2+(ysize*(mCol*3))+(ysize*col), xsize, ysize,  Lib.getTileColor(hiddenType));
     }
 
     @Override

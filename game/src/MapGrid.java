@@ -35,6 +35,10 @@ class MapGrid extends Seedable implements Iterable<MapCell>{
   // all our rooms
   MapCell[][] rooms;
 
+  int focusdCol;
+  int focusedRow;
+  MapCell focusedCell;
+
   public MapGrid(long mapSeed, int sizeIn){
     // does our map seed stuff
     super(mapSeed);
@@ -130,6 +134,8 @@ class MapGrid extends Seedable implements Iterable<MapCell>{
         );
     }
   }
+
+  
 
   /**
    * @override using the new genericable cell iterator based on
