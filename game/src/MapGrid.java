@@ -10,6 +10,8 @@ import java.util.List;
  *        Generated based on a provided seed.
  */
 class MapGrid extends Seedable implements Iterable<MapCell>{
+  // margins
+  public static int horizMargin = 10, vertiMargin = 10;
   // positioiniing of the mapgrid
   int x,y;
   // the rows and columns of our grid
@@ -17,26 +19,37 @@ class MapGrid extends Seedable implements Iterable<MapCell>{
   // all our rooms
   MapCell[][] rooms;
 
-  public MapGrid(long mapSeed){
+  public MapGrid(long mapSeed, int sizeIn){
     // does our map seed stuff
     super(mapSeed);
+    // announce the annoucement
+    System.out.println("MapGrid constructing with seed: "+mapSeed);
     // positioning
-    x = 10; y = 10;
+    x = horizMargin; y = vertiMargin;
     cellCountX = 3;
     cellCountY = 3;
+    int cellDiam = sizeIn/cellCountX;
     // grab 2 randoms for the cols/rows
     this.rollInt();this.rollInt(); // placeholder
 
     // make the rooms
     rooms = new MapCell[cellCountX][cellCountY];
     
+    System.out.println("Room layout:\n");
     // then fill out the cell seeds
     for(int i = 0; i < cellCountX; i++){
       for(int k = 0; k < cellCountY; k++){
         char currCellType = Lib.getDefault_MapCellType();
-        rooms[i][k] = new MapCell(this.rollLong(),currCellType,i,k);
+        rooms[i][k] = new MapCell(
+            this.rollLong(),
+            currCellType,
+            i,k,
+            cellDiam
+          );
       }
+      System.out.println("");// free newline
     }
+    System.out.println("");// free newline
 
 
   }
@@ -63,7 +76,12 @@ class MapGrid extends Seedable implements Iterable<MapCell>{
   public void paintOverlay(Graphics g, List<MapCell> cellListIn, Color overlayColor) {
     // loop all tiles iin the list
     for (MapCell t : cellListIn) {
-      Lib.drawBox(g, x+t.x + 2, y+t.y + 2, t.diam - 4, t.diam - 4, overlayColor);
+      Lib.drawBox(
+          g,
+          x+t.x + MapCell.horizMargin, y+t.y + MapCell.vertiMargin,
+          t.diam - (MapCell.horizMargin*2), t.diam - (MapCell.vertiMargin*2),
+          overlayColor
+        );
     }
   }
 

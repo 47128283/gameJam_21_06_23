@@ -24,7 +24,7 @@ class Stage extends Seedable {
     // use the seedable super construction
     super(seedIn);
     // then get our mapgrid instance
-    mapgrid = new MapGrid(this.rollLong());
+    mapgrid = new MapGrid( this.rollLong(), 400 );
 
     // proclaim our seed
     System.out.println("Stage using seed: "+this.getSeedLong());

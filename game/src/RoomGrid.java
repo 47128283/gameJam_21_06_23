@@ -10,8 +10,6 @@ class RoomGrid extends MapCell implements Iterable<RoomTile> {
     public static int tileSize = 35;
     public int colCount = 3;
     public int rowCount = 3;
-    public int horizMargin = 10;
-    public int vertiMargin = 10;
 
     // the tiles array
     RoomTile[][] tiles;
@@ -20,42 +18,6 @@ class RoomGrid extends MapCell implements Iterable<RoomTile> {
     // holds the default tile type for this room
 
     char defaultTile;
-    /**
-     * @brief default constructor
-     */
-    protected RoomGrid() {
-        // default MapCell construction
-        super();
-        // default sizing
-        colCount = 3; rowCount = 3;
-        tiles = new RoomTile[colCount][rowCount];
-        // setup the cells
-        for (int i = 0; i < tiles.length; i++) {
-            for (int j = 0; j < tiles[i].length; j++) {
-                int x = horizMargin + tileSize * i;
-                int y = vertiMargin + tileSize * j;
-                // tiles[i][j] = new RoomTile(i, j, x, y,'#');
-                tiles[i][j] = new RoomTile(i, j, x, y, Lib.getDefault_tileByRoomType(this.type));
-            }
-        }
-    }
-
-    // /**
-    //  * @brief constructor only being given a room type
-    //  * @param t the type given to generate the room by
-    //  */
-    // protected RoomGrid(RoomType t) {
-    //     int count = 0;
-    //     for (int i = 0; i < tiles.length; i++) {
-    //         for (int j = 0; j < tiles[i].length; j++) {
-    //             int x = horizMargin + tileSize * i;
-    //             int y = vertiMargin + tileSize * j;
-    //             char[] tt = t.rooms.toCharArray();
-    //             tiles[i][j] = new RoomTile(i, j, x, y, tt[count]);
-    //             count ++;
-    //         }
-    //     }
-    // }
 
     /**
      * @brief constructor with the seed and type input
@@ -64,13 +26,14 @@ class RoomGrid extends MapCell implements Iterable<RoomTile> {
      * @param colIn the col this room is in the map's grid
      * @param rowIn the row this room is in the map's grid
      */
-    public RoomGrid(long seedIn, char typeIn, int colIn, int rowIn){
+    public RoomGrid(long seedIn, char typeIn, int colIn, int rowIn, int sizeIn){
         // make seedable instance by seed
-        super(seedIn, typeIn, colIn, rowIn);
+        super(seedIn, typeIn, colIn, rowIn, sizeIn);
         // fetch the room string
         roomBaseString = Lib.getRoomStringByType(typeIn);
-        int roomSize = Lib.getSizeByStringLength(roomBaseString.length());
-        colCount = roomSize; rowCount = roomSize;
+        // int roomSize = Lib.getSizeByStringLength(roomBaseString.length());
+        // colCount = roomSize; rowCount = roomSize;
+        colCount = 3; rowCount = 3;
         // make the tiles arrays
         tiles = new RoomTile[colCount][rowCount];
         // the index to grab from the string

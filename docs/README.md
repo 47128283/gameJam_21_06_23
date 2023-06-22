@@ -311,6 +311,8 @@
                     <li><code>[03:21pm]</code> ---> <i>started the room strings section</li>
                     <li><code> ----- ----- ----- ----- ----- </code></li>
                     <li><code>[06:52pm]</code> ---> <i>ported all <code>CorbLib</code> into <code>Lib</code></li>
+                    <li><code> ----- ----- ----- ----- ----- </code></li>
+                    <li><code>[08:12pm]</code> ---> <i>fixed some issues with not properly providing positioning to sub elements</li>
                     <li><code> ===== ===== ===== ===== ===== </code></li>
                 </ul>
             </details>

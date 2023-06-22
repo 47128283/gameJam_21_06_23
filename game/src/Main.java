@@ -140,7 +140,7 @@ class Main extends JFrame{
 
 
     // setup and run window
-    Main window = new Main(600,400);
+    Main window = new Main(640,420);
     window.run();
   }
 
