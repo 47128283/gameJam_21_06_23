@@ -156,26 +156,22 @@ public class Lib {
       // ------------------------------------------
       // empty / transparent
       default:
-      case '\0':
+      // black?
+      case TILE_DEAD:
         return new Color(0.0f,0.0f,0.0f,0.0f);
       // ------------------------------------------
-      // black?
-      case '#':
-      // black
-      case '0':
-        return new Color(0.0f,0.0f,0.0f);
-      // ------------------------------------------
-      // grey
-      case '1':
-        return new Color(0.5f,0.5f,0.5f);
-      // ------------------------------------------
-      // lightish grey
-      case '2':
-        return new Color(0.8f,0.8f,0.8f);
-      // ------------------------------------------
+      // dark grey
+      case TILE_BOUNDARY:
+        return Color.DARK_GRAY;
       // white
-      case '3':
-        return new Color(1.0f,1.0f,1.0f);
+      case TILE_WALKABLE:
+        return Color.WHITE;
+      // grey
+      case TILE_SPECIAL:
+        return Color.GRAY;
+      // grey
+      case TILE_ERROR:
+        return Color.GREEN;
       // ------------------------------------------
     }
   }
