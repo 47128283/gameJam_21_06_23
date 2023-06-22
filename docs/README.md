@@ -298,7 +298,9 @@
                     <li><code>[01:41pm]</code> ---> <i>branched for <code>TileType</code> redesign into just characters</i></li>
                     <li><code>[01:41pm]</code> ---> <i>cryiing internally bc i wasted so much time on refactoring</i></li>
                     <li><code> ----- ----- ----- ----- ----- </code></li>
-                    <li><code>[00:00pm]</code> ---> <i></i></li>
+                    <li><code>[02:41pm]</code> ---> <i>changed to using functions for drawing pixel boxes so completely depreciated the <code>PixelBox</code> object</i></li>
+                    <li><code>[02:41pm]</code> ---> <i>working on the making the replace for room tile object declarations</li>
+                    <li><code> ----- ----- ----- ----- ----- </code></li>
                     <li><code>[00:00pm]</code> ---> <i></i></li>
                     <li><code> ===== ===== ===== ===== ===== </code></li>
                 </ul>
