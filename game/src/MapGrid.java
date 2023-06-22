@@ -132,6 +132,27 @@ class MapGrid extends Seedable implements Iterable<MapCell>{
     }
   }
 
+  /**
+   * @brief makes the MapGrid focus onto the given MapCell
+   */
+  void focusOn(MapCell c) {
+    this.focusedCell = c;
+    this.isfocused = true;
+    this.focusedCol = c.col;
+    this.focusedRow = c.row;
+  }
+
+  /**
+   * @brief makes the MapGrid unfocus from a MapCell
+   * @sets focusedCol to -1 and focusedRow to -1
+   */
+  void unfocus() {
+    this.focusedCell = null;
+    this.isfocused = false;
+    this.focusedCol = -1;
+    this.focusedRow = -1;
+  }
+
   MapCell getCell(int col, int row) {
     return this.rooms[col][row];
   }
@@ -146,6 +167,10 @@ class MapGrid extends Seedable implements Iterable<MapCell>{
 
   int getFocusedRow() {
     return this.focusedCol;
+  }
+
+  boolean getIsFocused() {
+    return this.isfocused;
   }
 
   /**
