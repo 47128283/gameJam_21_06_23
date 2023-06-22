@@ -152,6 +152,16 @@ class RoomGrid extends MapCell implements Iterable<RoomTile> {
       return new CellIterator<RoomTile>(tiles);
     }
 
+     Boolean canMoveTo(int inCol, int inRow) {
+      if((inCol > this.col) || (inCol < 0) || (inRow > this.row) || (inRow < 0)) {
+        return null;
+      }
+
+      if(this.tiles[this.col][this.row] == '#') {
+        
+      }
+    }
+
     /**
      * @brief should just give back a string fo rthe cell types
      */
