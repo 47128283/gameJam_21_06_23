@@ -402,10 +402,10 @@ public class CorbLib {
   public static void loadCourFont(){
     try{
       GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
-      File cour = new File("game/data/cour.ttf");
+      File cour = new File("./game/data/cour.ttf");
       ge.registerFont(Font.createFont(Font.TRUETYPE_FONT, cour));
     } catch(IOException e){
-      System.err.println("cant load cour.ttf properly in path 'game/data/cour.ttf'");
+      System.err.println("cant load cour.ttf properly in path './game/data/cour.ttf'");
     } catch(Exception e){
       System.err.println("large scoped exception catcher for CorbLib.loadCourFont()" );
     }
