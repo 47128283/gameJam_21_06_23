@@ -55,6 +55,11 @@ class MapGrid extends Seedable implements Iterable<MapCell>{
     System.out.println("");// free newline
 
 
+
+    //decide to do more with centre one
+    MapCell modify = rooms[1][1];
+    // testing
+    rooms[1][1] = new RoomGrid(modify.getSeedLong(), modify.type, modify.col, modify.row, modify.diam);
   }
 
   /**
