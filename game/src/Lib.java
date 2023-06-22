@@ -36,10 +36,11 @@ public class Lib {
   /* ======================================================================== */
 
   public static char getDefault_MapCellType() {
-    return '\0';
+    return ROOM_PLUS;
   }
   public static char getDefault_tileByRoomType(char type) {
-    return getDefault_MapCellType();
+    //return getDefault_MapCellType();
+    return 'E';
   }
   
 
@@ -266,7 +267,7 @@ public class Lib {
   public static final char TILE_BOUNDARY = '#';
   public static final char TILE_WALKABLE = '.';
   public static final char TILE_SPECIAL  = '*';
-
+  public static final char TILE_ERROR  = 'E';
 
   /**
    * @brief room char constants

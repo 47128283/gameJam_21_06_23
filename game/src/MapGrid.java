@@ -22,6 +22,8 @@ class MapGrid extends Seedable implements Iterable<MapCell>{
     super(mapSeed);
     // positioning
     x = 10; y = 10;
+    cellCountX = 3;
+    cellCountY = 3;
     // grab 2 randoms for the cols/rows
     this.rollInt();this.rollInt(); // placeholder
 

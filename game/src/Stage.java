@@ -44,6 +44,7 @@ class Stage extends Seedable {
    */
   void paint(Graphics g, Point mousePos) {
     mapgrid.paint(g, mousePos);
+    
   }
   
 }

@@ -63,11 +63,11 @@ class RoomTile extends Rectangle {
      */
     public Boolean canMoveTo() {
       switch(this.hiddenType) {
-        case '#': //boundary
+        case Lib.TILE_BOUNDARY: //boundary
           return false;
-        case '.': //walkable
+        case Lib.TILE_WALKABLE: //walkable
           return true;
-        case '*': //item
+        case Lib.TILE_SPECIAL: //item
           return true;
         default: 
           return null;
