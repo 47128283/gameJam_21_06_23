@@ -9,7 +9,7 @@ class Stage extends Seedable {
 
   public static long mapGridSeed;
   public static int mapGridSize;
-  public static long getMapGridSize(){ return mapGridSize; }
+  public static int getMapGridSize(){ return mapGridSize; }
   public static long getMapGridSeed(){ return mapGridSeed; }
 
   /* ##################################################################################### */
@@ -32,6 +32,7 @@ class Stage extends Seedable {
     //mapgrid = new MapGrid( this.rollLong(), 400 );
     mapGridSeed = this.rollLong();
     mapGridSize = 400;
+    mapgrid = new MapGrid(mapGridSeed, mapGridSize);
 
     // proclaim our seed
     System.out.println("Stage using seed: "+this.getSeedLong());

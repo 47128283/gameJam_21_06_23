@@ -46,7 +46,7 @@ class RoomGrid extends MapCell implements Iterable<RoomTile> {
                 // grab the char from the string
                 char currTile = roomBaseString.charAt(currCharIdxInString);
                 // the tile init
-                tiles[i][j] = new RoomTile(i, j, x, y, currTile);
+                tiles[i][j] = new RoomTile(j,i, x, y, currTile);
             }
         }
     }
