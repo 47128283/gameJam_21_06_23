@@ -4,7 +4,7 @@
 <!--        Project:    gameJam_21_06_23                                                   -->
 <!--           Team:    Panic                                                              -->
 <!--      Game name:    ...                                                                -->
-<!--         Branch:    main                                                               -->
+<!--         Branch:    thursday-morning-aurora                                            -->
 <!--        Created:    2023-06-21                                                         -->
 <!--    Last update:    2023-06-22                                                         -->
 <!--         Author:    47128283                                                           -->
@@ -109,6 +109,37 @@
                     <li><code>[12:53am]</code> ---> <i>filled out <code>Main</code> including nested <code>App</code> object which contains the <code>Stage</code> instance</i></li>
                     <li><code>[12:53am]</code> ---> <i>made the path of <code>Main</code>--&gt;<code>App</code>--&gt;<code>Stage</code>--&gt;<code>MapGrid</code> call/object structure</i></li>
                     <li><code>[12:53am]</code> ---> <i>added in some formatting and cleaned up <code>README.md</code> with ideas/tasks/plans</i></li>
+                    <li><code> ===== ===== ===== ===== ===== </code></li>
+                </ul>
+            </details>
+        </li>
+        <li><code>[22/06/23]</code> ---> <i><code>thursday-morning-aurora</code> branch</i>
+            <details>
+                <summary><i>show / hide</i></summary>
+                <ul>
+                    <li><code> ===== ===== ===== ===== ===== </code></li>
+                    <li><code>[10:00am]</code> ---> <i>finished merging <code>wed-night-...</code> branches into main</i></li>
+                    <li><code>[10:00am]</code> ---> <i>creating branch and updating readme to reflect</i></li>
+                    <li><code>[10:01am]</code> ---> <i>began work on trawling through code for any issues before beginning further tasks</i></li>
+                    <li><code> ----- ----- ----- ----- ----- </code></li>
+                    <li><code>[00:00am]</code> ---> <i></i></li>
+                    <li><code> ----- ----- ----- ----- ----- </code></li>
+                    <li><code>[00:00am]</code> ---> <i></i></li>
+                    <li><code>[00:00am]</code> ---> <i></i></li>
+                    <li><code> ===== ===== ===== ===== ===== </code></li>
+                </ul>
+            </details>
+        </li>
+        <li><code>[22/06/23]</code> ---> <i></i>
+            <details>
+                <summary><i>show / hide</i></summary>
+                <ul>
+                    <li><code> ===== ===== ===== ===== ===== </code></li>
+                    <li><code>[00:00am]</code> ---> <i></i></li>
+                    <li><code>[00:00am]</code> ---> <i></i></li>
+                    <li><code> ----- ----- ----- ----- ----- </code></li>
+                    <li><code>[00:00am]</code> ---> <i></i></li>
+                    <li><code>[00:00am]</code> ---> <i></i></li>
                     <li><code> ===== ===== ===== ===== ===== </code></li>
                 </ul>
             </details>
