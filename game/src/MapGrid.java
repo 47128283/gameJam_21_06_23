@@ -35,7 +35,7 @@ class MapGrid extends Seedable implements Iterable<MapCell>{
   // all our rooms
   MapCell[][] rooms;
 
-  int focusdCol;
+  int focusedCol;
   int focusedRow;
   MapCell focusedCell;
 
@@ -112,10 +112,6 @@ class MapGrid extends Seedable implements Iterable<MapCell>{
       return false;
     }
   }
-  
-  MapCell getCell(int col, int row) {
-    return this.rooms[col][row];
-  }
 
   /**
    * @brief takes a tile list and paints an overlay over them
@@ -135,7 +131,21 @@ class MapGrid extends Seedable implements Iterable<MapCell>{
     }
   }
 
-  
+  MapCell getCell(int col, int row) {
+    return this.rooms[col][row];
+  }
+
+  MapCell getFocusedCell() {
+    return this.focusedCell;
+  }
+
+  int getFocusedCol() {
+    return this.focusedRow;
+  }
+
+  int getFocusedRow() {
+    return this.focusedCol;
+  }
 
   /**
    * @override using the new genericable cell iterator based on
