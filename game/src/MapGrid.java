@@ -10,6 +10,21 @@ import java.util.List;
  *        Generated based on a provided seed.
  */
 class MapGrid extends Seedable implements Iterable<MapCell>{
+  /* ======================================== */
+  /* ======================================== */
+  
+  // singleton
+
+  private static MapGrid instance;
+  public static MapGrid getInstance(){
+    if( instance==null ){ instance = new MapGrid( Stage.getMapGridSeed(), Stage.getMapGridSize() ); }
+    return instance;
+  }
+  // TODO: have private constructor ask Stage for seed/size
+  
+  /* ======================================== */
+  /* ======================================== */
+
   // margins
   public static int horizMargin = 10, vertiMargin = 10;
   // positioiniing of the mapgrid
