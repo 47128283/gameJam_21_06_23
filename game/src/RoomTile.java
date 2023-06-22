@@ -1,12 +1,23 @@
 import java.awt.*;
 
+/**
+ * @breif yeet
+ * @param drawnType use hiddenType instead
+ * @param hiddenType use this
+*/
 class RoomTile extends Rectangle {
     // RoomTile properties
     protected static int size = RoomGrid.tileSize;
     protected int col;
     protected int row;
 
+    /**
+     * @warning use hiddenType instead of drawnType
+     */
     protected char hiddenType;
+    /**
+     * @warning use hiddenType instead of drawnType
+     */
     protected char drawnType;
 
 
@@ -27,7 +38,7 @@ class RoomTile extends Rectangle {
     // general tile painter method called from Grid class
     void paint(Graphics g, Point mousePos) {
       // draw a box by the thing in lib
-      Lib.drawBox(g, x, y, width, height, Lib.getTileColor(drawnType));
+      Lib.drawBox(g, x+row*size, y+col*size, width, height,  Lib.getTileColor(hiddenType));
     }
 
     @Override

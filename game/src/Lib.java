@@ -425,7 +425,20 @@ public class Lib {
   /* ======================================================================== */
 
   public static Color getTileColor(char drawnType) {
-    return null;
+    switch(drawnType) {
+      case TILE_DEAD:
+        return new Color(255,0,0);
+      case TILE_BOUNDARY:
+        return new Color(128,128,128);
+      case TILE_WALKABLE:
+        return new Color(192,192,192);
+      case TILE_SPECIAL:
+        return new Color(255,255,0);
+      case TILE_ERROR:
+        return new Color(255,0,255);
+      default:
+        return null;
+    }
   }
 
   public static Color getOverlayColor() {

@@ -78,7 +78,7 @@ class MapCell extends Seedable{
      * @param g the graphics object
      * @param mousePos the pos of mouse
      */
-    void paint(Graphics g, Point mousePos) {
+    void  paint(Graphics g, Point mousePos) {
         // return if we shouldnt paint the background
         if(!drawBase) return;
         // bg color

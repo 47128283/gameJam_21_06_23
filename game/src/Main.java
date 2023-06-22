@@ -206,6 +206,7 @@ class Main extends JFrame{
     while (true) {
       // peep time
       Instant startTime = Instant.now();
+      
       // do a painting
       this.repaint();
       // re-peep time

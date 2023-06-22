@@ -70,6 +70,7 @@ class RoomGrid extends MapCell implements Iterable<RoomTile> {
      * @param g the graphics object
      * @param tileListIn the tile list to paint over
      * @param overlayColor the color of overlay (should be alpha <1.0 tbh)
+     * @todo fix so it works like mapgrid
      */
     public void paintOverlay(Graphics g, List<RoomTile> tileListIn, Color overlayColor) {
       // loop all tiles iin the list
@@ -81,10 +82,14 @@ class RoomGrid extends MapCell implements Iterable<RoomTile> {
     /**
      * @brief the painting of room grid with mousepos
      */
+    
     public void paint(Graphics g, Point mousePos){
       // then paint the tiles over
       for(RoomTile t : this){
         t.paint(g,mousePos);
+        if(t.contains(mousePos)){
+          paintOverlay(g, List.of(t), Lib.getOverlayColor());
+        }
       }
     }
 
