@@ -4,7 +4,7 @@
 <!--        Project:    gameJam_21_06_23                                                   -->
 <!--           Team:    Panic                                                              -->
 <!--      Game name:    ...                                                                -->
-<!--         Branch:    thursday-morning-aurora                                            -->
+<!--         Branch:    redesign-TileType                                                  -->
 <!--        Created:    2023-06-21                                                         -->
 <!--    Last update:    2023-06-22                                                         -->
 <!--         Author:    47128283                                                           -->
@@ -295,6 +295,9 @@
                     <li><code>[01:38pm]</code> ---> <i>literally burnt time on the heirachy thing in readme.md</i></li>
                     <li><code>[01:38pm]</code> ---> <i>removed unused <code>game/src/App.java</code></i></li>
                     <li><code> ----- ----- ----- ----- ----- </code></li>
+                    <li><code>[01:41pm]</code> ---> <i>branched for <code>TileType</code> redesign into just characters</i></li>
+                    <li><code>[01:41pm]</code> ---> <i>cryiing internally bc i wasted so much time on refactoring</i></li>
+                    <li><code> ----- ----- ----- ----- ----- </code></li>
                     <li><code>[00:00pm]</code> ---> <i></i></li>
                     <li><code>[00:00pm]</code> ---> <i></i></li>
                     <li><code> ===== ===== ===== ===== ===== </code></li>
@@ -330,10 +333,9 @@
 <details>
     <summary><i>show / hide</i></summary>
     <ul>
-        <li><i>merge branches for 22/6/23 day start</i></li>
         <li><i>make working prototype with the object structure and basic details</i></li>
         <li><i>add in stats display</i></li>
-        <li><i>add in input</i></li>
+        <li><i>add in input</i> (mouse input structure added)</li>
         <li><i></i></li>
         <li><i></i></li>
         <li></li>
@@ -412,15 +414,6 @@
               <li><code> ===== ===== ===== ===== ===== </code></li>
             </ul>
           </li>
-          <li><i><code>PixelBox</code> tasks:</i>
-            <ul>
-              <li><code> ===== ===== ===== ===== ===== </code></li>
-              <li><i>change structure to be functions instead</i></li>
-              <li><i>takes <code>String</code> or <code>char[][]</code></i></li>
-              <li><i>have there be a thing in lib for colour conversion from type char</i></li>
-              <li><code> ===== ===== ===== ===== ===== </code></li>
-            </ul>
-          </li>
         </ul>
       </details>
     </li>
@@ -453,6 +446,14 @@
           </li>
         </ul>
       </details>
+    </li>
+    <li><i><code>PROJECT-WIDE</code> tasks:</i>
+      <ul>
+        <li><code> ===== ===== ===== ===== ===== </code></li>
+        <li><i>change indentation to be 2 spaces instead of 4 bc 4 is too much tbh</i></li>
+        <li><i></i></li>
+        <li><code> ===== ===== ===== ===== ===== </code></li>
+      </ul>
     </li>
   </ul>
 </details>
