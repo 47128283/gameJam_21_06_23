@@ -152,13 +152,16 @@ class RoomGrid extends MapCell implements Iterable<RoomTile> {
       return new CellIterator<RoomTile>(tiles);
     }
 
-     Boolean canMoveTo(int inCol, int inRow) {
+    /**
+     * @brief Checks if the player can move to a tile within this RoomGrid.
+     * 
+     * @returns A Boolean value which returns true if you can walk on it, false if you can't, and null if it is a bad input.
+     */
+    public Boolean canMoveTo(int inCol, int inRow) {
       if((inCol > this.col) || (inCol < 0) || (inRow > this.row) || (inRow < 0)) {
         return null;
-      }
-
-      if(this.tiles[this.col][this.row] == '#') {
-        
+      } else {
+        return this.tiles[inCol][inRow].canMoveTo();
       }
     }
 

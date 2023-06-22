@@ -56,6 +56,24 @@ class RoomTile extends Rectangle {
       drawnType = t;
     }
 
+    /**
+     * @brief Checks if the player can move to this tile.
+     * 
+     * @returns A Boolean value which returns true if you can walk on it, false if you can't, and null if it is a bad input.
+     */
+    public Boolean canMoveTo() {
+      switch(this.hiddenType) {
+        case '#': //boundary
+          return false;
+        case '.': //walkable
+          return true;
+        case '*': //item
+          return true;
+        default: 
+          return null;
+      }
+    }
+
     public int leftOfComparison(RoomTile c) {
         return Integer.compare(col, c.col);
     }
