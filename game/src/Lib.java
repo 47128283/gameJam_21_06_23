@@ -256,6 +256,18 @@ public class Lib {
     return returnableString;
   }
 
+
+  
+  /**
+   * @brief tile char constants
+   */
+
+  public static final char TILE_DEAD     = '\0';
+  public static final char TILE_BOUNDARY = '#';
+  public static final char TILE_WALKABLE = '.';
+  public static final char TILE_SPECIAL  = '*';
+
+
   /**
    * @brief room char constants
    */
@@ -267,9 +279,11 @@ public class Lib {
   public static final char ROOM_L_INVREV = '4';
   public static final char ROOM_T        = '5';
   public static final char ROOM_T_INV    = '6';
-  public static final char ROOM_BAR_H    = '7';
-  public static final char ROOM_BAR_V    = '8';
-  public static final char ROOM_PLUS     = '9';
+  public static final char ROOM_T_LEFT   = '7';
+  public static final char ROOM_T_RIGHT  = '8';
+  public static final char ROOM_BAR_H    = '9';
+  public static final char ROOM_BAR_V    = 'a';
+  public static final char ROOM_PLUS     = 'b';
 
   /**
    * @brief make a rooms string
