@@ -7,6 +7,11 @@ import java.awt.event.MouseEvent;
  */
 class Stage extends Seedable {
 
+  public static long mapGridSeed;
+  public static int mapGridSize;
+  public static long getMapGridSize(){ return mapGridSize; }
+  public static long getMapGridSeed(){ return mapGridSeed; }
+
   /* ##################################################################################### */
   /* ===================================================================================== */
   /* ----------------------->> Stage instance implementation <<--------------------------- */
@@ -23,8 +28,10 @@ class Stage extends Seedable {
   Stage(long seedIn) {
     // use the seedable super construction
     super(seedIn);
-    // then get our mapgrid instance
-    mapgrid = new MapGrid( this.rollLong(), 400 );
+    // // then get our mapgrid instance
+    //mapgrid = new MapGrid( this.rollLong(), 400 );
+    mapGridSeed = this.rollLong();
+    mapGridSize = 400;
 
     // proclaim our seed
     System.out.println("Stage using seed: "+this.getSeedLong());
