@@ -38,6 +38,7 @@ class MapGrid extends Seedable implements Iterable<MapCell>{
   int focusedCol;
   int focusedRow;
   MapCell focusedCell;
+  boolean isfocused;
 
   public MapGrid(long mapSeed, int sizeIn){
     // does our map seed stuff
