@@ -405,7 +405,7 @@
           <li><i>branch wide</i>
             <ul>
               <li><code> ===== ===== ===== ===== ===== </code></li>
-              <li><i>move the <code>charToColor</code> function to <code>CorbLib</code> then make a reference for it or something?</i></li>
+              <li><i>replace the tile thiingy with the new iin the cobrlib firle thingy how do type?</i></li>
               <li><code> ===== ===== ===== ===== ===== </code></li>
             </ul>
           </li>
