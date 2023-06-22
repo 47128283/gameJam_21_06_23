@@ -43,6 +43,152 @@
 <hr /><!-- =============================================================================== -->
 <!-- ===================================================================================== -->
 
+<h2>Project structure</h2>
+<details>
+  <summary><i>show / hide</i></summary>
+  <ul>
+    <li><b>File structure</b> <code>(</code><i>./game/src/*</i><code>)</code>
+      <details>
+        <summary><i>show / hide</i></summary>
+        <ul>
+          <li><code>CellIterator.java</code>
+            <ul>
+              <li><code>class CellIterator&lt;T&gt; implements Iterator&lt;T&gt;</code></li>
+              <li><i></i></li>
+            </ul>
+          </li>
+          <li><code>CorbLib.java</code>
+            <ul>
+              <li><i>Aurora's <code>Lib</code> file</i></li>
+            </ul>
+          </li>
+          <li><code>Lib.java</code>
+            <ul>
+              <li><i>globally accessible variables and functions</i></li>
+            </ul>
+          </li>
+          <li><code>Main.java</code>
+            <ul>
+              <li><i>main landing point and java runtime application/process instance creation</i></li>
+            </ul>
+          </li>
+          <li><code>MapCell.java</code>
+            <ul>
+              <li><i>the base class for a cell in the map's grid</i></li>
+            </ul>
+          </li>
+          <li><code>MapGrid.java</code>
+            <ul>
+              <li><i>the grid of rooms</i></li>
+            </ul>
+          </li>
+          <li><code>PixelBox.java</code>
+            <ul>
+              <li><i>class for drawing pixel boxes</i></li>
+            </ul>
+          </li>
+          <li><code>Player.java</code>
+            <ul>
+              <li><i>player handling</i></li>
+            </ul>
+          </li>
+          <li><code>RoomGrid.java</code>
+            <ul>
+              <li><i>room's tile grid</i></li>
+            </ul>
+          </li>
+          <li><code>RoomTile.java</code>
+            <ul>
+              <li><i>a specific tile in the room</i></li>
+            </ul>
+          </li>
+          <li><code>RoomType.java</code>
+            <ul>
+              <li><i>tile type field</i></li>
+            </ul>
+          </li>
+          <li><code>Seedable.java</code>
+            <ul>
+              <li><i>random number generation</i></li>
+            </ul>
+          </li>
+          <li><code>Stage.java</code>
+            <ul>
+              <li><i>stage controller for game instance</i></li>
+            </ul>
+          </li>
+          <li><code>TileType.java</code>
+            <ul>
+              <li><i>tile type object handling</i></li>
+            </ul>
+          </li>
+        </ul>
+      </details>
+    </li>
+    <li><b>Heirachy</b> (As at <code>[22/06/23][01:00pm]</code>)
+      <details>
+        <summary><i>show / hide</i></summary>
+        <details>
+          <summary><code>Main</code></summary>
+          <ul><li><details>
+            <summary><code>Main.App</code></summary>
+            <ul><li><details>
+              <summary><code>Stage</code></summary>
+              <ul><li><details>
+                <summary><code>MapGrid</code></summary>
+                <ul><li><details>
+                  <summary><code>MapCell[][]</code></summary>
+                  <!-- item in 2d array of MapCell -->
+                  <ul>
+                    <li><i>reference: <code>MapCell</code></i>
+                      <ul><li><details>
+                        <summary><i>vars</i></summary>
+                        <ul>
+                          <li><code>Point parentSpaceOrigin</code>
+                            <ul><li><i>insert-comments</i></li></ul>
+                          </li>
+                        </ul>
+                      </details></li></ul>
+                    </li>
+                    <li><i>instance: <code>RoomGrid</code></i>
+                      <ul>
+                        <li><i>extends <code>MapCell</code> implements <code>Iterable&lt;RoomTile&gt;</code></i></li>
+                        <li><details>
+                          <summary><code>RoomTile[][]</code></summary>
+                          <!-- item in 2d array of RoomTile -->
+                          <ul><li>
+                            <details>
+                              <summary><i>vars</i></summary>
+                              <ul>
+                                <li><code>TileType type</code>
+                                  <ul><li><i>the tile type</i></li></ul>
+                                </li>
+                              </ul>
+                            </details></li>
+                          </li></ul>
+                          <!-- end of item in 2d array of RoomTile -->
+                        </details></li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <!-- end of item in 2d array of RoomTile -->
+                </details></li></ul>
+              </details></li></ul>
+            </details></li></ul>
+          </details></li></ul>
+        </details>
+      </details>
+    </li>
+    <li><code></code></li>
+    <li><code></code></li>
+    <li><code></code></li>
+  </ul>
+</details>
+
+<!-- ===================================================================================== -->
+<hr /><!-- =============================================================================== -->
+<!-- ===================================================================================== -->
+
 <h2>Notices / Changes</h2>
 <!-- notices / changes dropdown -->
 <details>
@@ -137,8 +283,20 @@
                     <li><code>[11:40am]</code> ---> <i>fixed up <code>settings.json</code> location and cleaned ammended indentation</i></li>
                     <li><code>[11:40am]</code> ---> <i>commiting changes before working on tidying up indentation</i></li>
                     <li><code> ----- ----- ----- ----- ----- </code></li>
-                    <li><code>[00:00am]</code> ---> <i></i></li>
-                    <li><code>[00:00am]</code> ---> <i></i></li>
+                    <li><code>[12:17pm]</code> ---> <i>pause on indentation fixing and had quick break, working on cleaning up drawing code now</i></li>
+                    <li><code> ----- ----- ----- ----- ----- </code></li>
+                    <li><code>[12:23pm]</code> ---> <i>fixed url mistake in the day2.md</i></li>
+                    <li><code> ----- ----- ----- ----- ----- </code></li>
+                    <li><code>[12:48pm]</code> ---> <i>added in <code>MouseListener</code> interface usage in <code>Main.App</code></i></li>
+                    <li><code>[12:48pm]</code> ---> <i>added in handoff of <code>MouseEvent</code> to the  <code>Stage</code> instance inside a <code>Main.App</code> instance</i></li>
+                    <li><code> ----- ----- ----- ----- ----- </code></li>
+                    <li><code>[12:48pm]</code> ---> <i>woops all documentation/refactoring</i></li>
+                    <li><code>[12:48pm]</code> ---> <i>adding in comments to all the files to break apart and organise sections</i></li>
+                    <li><code>[01:38pm]</code> ---> <i>literally burnt time on the heirachy thing in readme.md</i></li>
+                    <li><code>[01:38pm]</code> ---> <i>removed unused <code>game/src/App.java</code></i></li>
+                    <li><code> ----- ----- ----- ----- ----- </code></li>
+                    <li><code>[00:00pm]</code> ---> <i></i></li>
+                    <li><code>[00:00pm]</code> ---> <i></i></li>
                     <li><code> ===== ===== ===== ===== ===== </code></li>
                 </ul>
             </details>
@@ -148,11 +306,11 @@
                 <summary><i>show / hide</i></summary>
                 <ul>
                     <li><code> ===== ===== ===== ===== ===== </code></li>
-                    <li><code>[00:00am]</code> ---> <i></i></li>
-                    <li><code>[00:00am]</code> ---> <i></i></li>
+                    <li><code>[00:00pm]</code> ---> <i></i></li>
+                    <li><code>[00:00pm]</code> ---> <i></i></li>
                     <li><code> ----- ----- ----- ----- ----- </code></li>
-                    <li><code>[00:00am]</code> ---> <i></i></li>
-                    <li><code>[00:00am]</code> ---> <i></i></li>
+                    <li><code>[00:00pm]</code> ---> <i></i></li>
+                    <li><code>[00:00pm]</code> ---> <i></i></li>
                     <li><code> ===== ===== ===== ===== ===== </code></li>
                 </ul>
             </details>
@@ -217,11 +375,11 @@
             </details>
         </li>
         <li><code> ----- ----- ----- ----- ----- </code></li>
-        <li><code>[22/06/23][00:00am]</code> ---> <code>person</code><i></i></li>
-        <li><code>[22/06/23][00:00am]</code> ---> <code>person</code><i></i></li>
+        <li><code>[22/06/23][00:00pm]</code> ---> <code>person</code><i></i></li>
+        <li><code>[22/06/23][00:00pm]</code> ---> <code>person</code><i></i></li>
         <li><code> ----- ----- ----- ----- ----- </code></li>
-        <li><code>[22/06/23][00:00am]</code> ---> <code>person</code><i></i></li>
-        <li><code>[22/06/23][00:00am]</code> ---> <code>person</code><i></i></li>
+        <li><code>[22/06/23][00:00pm]</code> ---> <code>person</code><i></i></li>
+        <li><code>[22/06/23][00:00pm]</code> ---> <code>person</code><i></i></li>
         <li><code> ===== ===== ===== ===== ===== </code></li>
     </ul>
 </details>
@@ -251,6 +409,15 @@
             <ul>
               <li><code> ===== ===== ===== ===== ===== </code></li>
               <li><i>add in <code>Player</code> instance holding</i></li>
+              <li><code> ===== ===== ===== ===== ===== </code></li>
+            </ul>
+          </li>
+          <li><i><code>PixelBox</code> tasks:</i>
+            <ul>
+              <li><code> ===== ===== ===== ===== ===== </code></li>
+              <li><i>change structure to be functions instead</i></li>
+              <li><i>takes <code>String</code> or <code>char[][]</code></i></li>
+              <li><i>have there be a thing in lib for colour conversion from type char</i></li>
               <li><code> ===== ===== ===== ===== ===== </code></li>
             </ul>
           </li>
@@ -300,12 +467,12 @@
   <summary><i>show / hide</i></summary>
   <ul>
     <li><code> ===== ===== ===== ===== ===== </code></li>
-    <li><code>[00/12/22][00:00xx]</code> ---> <i></i></li>
-    <li><code>[00/12/22][00:00xx]</code> ---> <i></i></li>
+    <li><code>[22/06/23][00:00pm]</code> ---> <i></i></li>
+    <li><code>[22/06/23][00:00pm]</code> ---> <i></i></li>
     <li><code> ----- ----- ----- ----- ----- </code></li>
-    <li><code>[00/12/22][00:00xx]</code> ---> <i></i></li>
-    <li><code>[00/12/22][00:00xx]</code> ---> <i></i></li>
-    <li><code>[00/12/22][00:00xx]</code> ---> <i></i></li>
+    <li><code>[22/06/23][00:00pm]</code> ---> <i></i></li>
+    <li><code>[22/06/23][00:00pm]</code> ---> <i></i></li>
+    <li><code>[22/06/23][00:00pm]</code> ---> <i></i></li>
     <li><code> ===== ===== ===== ===== ===== </code></li>
   </ul>
 </details>

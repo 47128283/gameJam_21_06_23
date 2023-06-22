@@ -1,10 +1,22 @@
 import java.awt.Graphics;
 import java.awt.Point;
+import java.awt.event.MouseEvent;
 
 /**
  * instance of stage is the current game stage/client
  */
-class Stage extends Seedable{
+class Stage extends Seedable {
+
+  /* ##################################################################################### */
+  /* ===================================================================================== */
+  /* ----------------------->> Stage instance implementation <<--------------------------- */
+  /* ===================================================================================== */
+  /* --                                                                                 -- */
+  /* --  * big picture game wide instance                                               -- */
+  /* --                                                                                 -- */
+  /* ===================================================================================== */
+  /* ##################################################################################### */
+
   // map grid instance of the current stage
   MapGrid mapgrid;
 
@@ -16,6 +28,14 @@ class Stage extends Seedable{
 
     // proclaim our seed
     System.out.println("Stage using seed: "+this.getSeedLong());
+  }
+
+  /**
+   * @brief called by app whenever there's a mouse event, providing the mouse event that happened
+   * @param e
+   */
+  public void handleMouseEvent(MouseEvent e){
+    // add code to loop over mouse queued mouse events i guess?
   }
 
   /**
