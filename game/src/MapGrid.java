@@ -109,6 +109,9 @@ class MapGrid extends Seedable implements Iterable<MapCell>{
     }
   }
   
+  MapCell getCell(int col, int row) {
+    return this.rooms[col][row];
+  }
 
   /**
    * @brief takes a tile list and paints an overlay over them

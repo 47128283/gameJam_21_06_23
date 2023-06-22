@@ -86,7 +86,7 @@ class RoomGrid extends MapCell implements Iterable<RoomTile> {
     public void paint(Graphics g, Point mousePos){
       // then paint the tiles over
       for(RoomTile t : this){
-        t.paint(g,mousePos);
+        t.paint(g,mousePos, this.col, this.row);
         if(t.contains(mousePos)){
           paintOverlay(g, List.of(t), Lib.getOverlayColor());
         }
@@ -131,6 +131,10 @@ class RoomGrid extends MapCell implements Iterable<RoomTile> {
       } else {
         return this.tiles[inCol][inRow].canMoveTo();
       }
+    }
+
+    RoomTile getTile(int col, int row) {
+      return this.tiles[col][row];
     }
 
     /**
