@@ -36,6 +36,7 @@
             <li><code>DISCORD</code> -- <code>deadbeef.c</code></li>
         </ul>
     </li>
+    <li><code>thursday-morning-aurora</code> branch is to be merged into <code>main</code> before splitting for afternoon branches</li>
 </ul>
 
 <!-- ===================================================================================== -->
