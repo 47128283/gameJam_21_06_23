@@ -4,7 +4,7 @@
 <!--        Project:    gameJam_21_06_23                                                   -->
 <!--           Team:    Panic                                                              -->
 <!--      Game name:    ...                                                                -->
-<!--         Branch:    redesign-TileType                                                  -->
+<!--         Branch:    Main                                                               -->
 <!--        Created:    2023-06-21                                                         -->
 <!--    Last update:    2023-06-22                                                         -->
 <!--         Author:    47128283                                                           -->
@@ -160,8 +160,11 @@
                             <details>
                               <summary><i>vars</i></summary>
                               <ul>
-                                <li><code>TileType type</code>
-                                  <ul><li><i>the tile type</i></li></ul>
+                                <li><code>char hiddenType</code>
+                                  <ul><li><i>the initial type</i></li></ul>
+                                </li>
+                                <li><code>char drawnType</code>
+                                  <ul><li><i>the current type</i></li></ul>
                                 </li>
                               </ul>
                             </details></li>
