@@ -317,7 +317,25 @@
                 </ul>
             </details>
         </li>
-        <li><code>[22/06/23]</code> ---> <i></i>
+        <li><code>[23/06/23]</code> ---> <i>midnight working</i>
+            <details>
+                <summary><i>show / hide</i></summary>
+                <ul>
+                    <li><code> ===== ===== ===== ===== ===== </code></li>
+                    <li><code>[12:05am]</code> ---> <i>updated the structure rooms, tiles, and stage</li>
+                    <li><code>[12:05am]</code> ---> <i>stage and mapgrid are referenced as rather spaghettified singletons</li>
+                    <li><code>[12:05am]</code> ---> <i>player stubs begun as singleton instance that's handled by stage</li>
+                    <li><code> ----- ----- ----- ----- ----- </code></li>
+                    <li><code>[12:00am]</code> ---> <i></i></li>
+                    <li><code>[12:00am]</code> ---> <i></i></li>
+                    <li><code> ----- ----- ----- ----- ----- </code></li>
+                    <li><code>[12:00am]</code> ---> <i></i></li>
+                    <li><code>[12:00am]</code> ---> <i></i></li>
+                    <li><code> ===== ===== ===== ===== ===== </code></li>
+                </ul>
+            </details>
+        </li>
+        <li><code>[23/06/23]</code> ---> <i></i>
             <details>
                 <summary><i>show / hide</i></summary>
                 <ul>
