@@ -2,11 +2,8 @@ import java.awt.*;
 // import java.util.Random;
 
 class MapCell extends Seedable{
-    // parent space origin
-    Point parentSpaceOrigin;
-    
-    // relative position of the cell to parent space
-    public int relX,relY;
+    // relative position of the cell in map grid
+    public int x,y;
     // diameter of the cell
     public int diam;
 
@@ -72,14 +69,14 @@ class MapCell extends Seedable{
         g.setColor(bgColor);
         // background
         g.fillRect(
-            (int)(relX+parentSpaceOrigin.getX()), (int)(relY+parentSpaceOrigin.getX()),
+            (int)(x), (int)(y),
             diam, diam
         );
         // outline color
         g.setColor(lineColor);
         // outline
         g.drawRect(
-            (int)(relX+parentSpaceOrigin.getX()), (int)(relY+parentSpaceOrigin.getX()),
+            (int)(x), (int)(y),
             diam, diam
         );
     }

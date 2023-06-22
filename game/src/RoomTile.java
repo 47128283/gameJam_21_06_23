@@ -5,75 +5,55 @@ class RoomTile extends Rectangle {
     protected static int size = RoomGrid.tileSize;
     protected int col;
     protected int row;
-    protected TileType type;
+
+    protected char hiddenType;
+    protected char drawnType;
+
+
 
     // // tile container
     // protected Tile tile;
 
     public RoomTile(int inCol, int inRow, int inX, int inY, char type) {
-        // rectangle super construction
-        super(inX, inY, size, size);
-        col = inCol;
-        row = inRow;
-        // set the default bgColor
-
-    }
-
-    // handle RoomTile background
-    void paintRoomTileBackground(Graphics g, Point mousePos){
-        if (contains(mousePos)) {
-            g.setColor(Color.GRAY);
-        } else {
-            g.setColor(type.tileColor);
-        }
-        g.fillRect(x, y, size, size);
-    }
-
-    // handle Tile Polygons
-    void paintTile(Graphics g, Point mousePos){
-        // // tbh just ignore dead tiles
-        // if(tile != null){
-        //     tile.paint(g,x,y,width,height);
-        // }
-
-    }
-    // handle base outline
-    void paintRoomTileOutline(Graphics g, Point mousePos){
-        g.setColor(Color.BLACK);
-        g.drawRect(x, y, size, size);
+      // rectangle super construction
+      super(inX, inY, size, size);
+      col = inCol;
+      row = inRow;
+      // handoff the type
+      hiddenType = type;
+      // handoff the drawable type
     }
 
     // general tile painter method called from Grid class
     void paint(Graphics g, Point mousePos) {
-        // handle RoomTile background
-        paintRoomTileBackground(g,mousePos);
-
-        // handle Tile Polygons
-        paintTile(g,mousePos);
-
-        // now draw outline
-        paintRoomTileOutline(g,mousePos);
-
+      // draw a box by the thing in lib
+      CorbLib.drawBox(g, x, y, width, height, CorbLib.getTileColor(drawnType));
     }
 
     @Override
     public boolean contains(Point p) {
-        if (p != null) {
-            return (super.contains(p));
-        } else {
-            return false;
-        }
+      if (p != null) {
+        return (super.contains(p));
+      } else {
+        return false;
+      }
     }
 
-    TileType setTileType(char t) {
-        switch(t) {
-            case '#':
-                return new Boundary();
-            case '*':
-                return new Walkable();
-            default:
-                return null;
-        }
+    // switch(t) {
+    //     case '#':
+    //         return new Boundary();
+    //     case '*':
+    //         return new Walkable();
+    //     default:
+    //         return null;
+    // }
+
+    void setHiddenType(char t) {
+      hiddenType = t;
+    }
+
+    void setDrawnType(char t) {
+      drawnType = t;
     }
 
     public int leftOfComparison(RoomTile c) {
@@ -85,6 +65,7 @@ class RoomTile extends Rectangle {
     }
 
     public String toString() {
-        return Character.toString(col) + Integer.toString(row) + ":" /*+ description*/;
+        // return Character.toString(col) + Integer.toString(row) + ":" /*+ description*/;
+        return ""+this.drawnType;
     }
 }

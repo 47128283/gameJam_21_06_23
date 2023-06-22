@@ -1,7 +1,8 @@
+import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Point;
 import java.util.Iterator;
-import java.util.Random;
+import java.util.List;
 
 /**
  * @brief is the object for which a game "map" is stored inside,
@@ -9,6 +10,8 @@ import java.util.Random;
  *        Generated based on a provided seed.
  */
 class MapGrid extends Seedable implements Iterable<MapCell>{
+  // positioiniing of the mapgrid
+  int x,y;
   // the rows and columns of our grid
   int cellCountX,cellCountY;
   // all our rooms
@@ -17,6 +20,8 @@ class MapGrid extends Seedable implements Iterable<MapCell>{
   public MapGrid(long mapSeed){
     // does our map seed stuff
     super(mapSeed);
+    // positioning
+    x = 10; y = 10;
     // grab 2 randoms for the cols/rows
     this.rollInt();this.rollInt(); // placeholder
 
@@ -43,6 +48,20 @@ class MapGrid extends Seedable implements Iterable<MapCell>{
     for(MapCell c : this){
       // paint it
       c.paint(g,mousePos);
+    }
+  }
+  
+
+  /**
+   * @brief takes a tile list and paints an overlay over them
+   * @param g the graphics object
+   * @param cellListIn the cell list to paint over
+   * @param overlayColor the color of overlay (should be alpha <1.0 tbh)
+   */
+  public void paintOverlay(Graphics g, List<MapCell> cellListIn, Color overlayColor) {
+    // loop all tiles iin the list
+    for (MapCell t : cellListIn) {
+      CorbLib.drawBox(g, x+t.x + 2, y+t.y + 2, t.diam - 4, t.diam - 4, overlayColor);
     }
   }
 

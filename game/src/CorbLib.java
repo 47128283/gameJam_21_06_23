@@ -238,11 +238,119 @@ public class CorbLib {
   /* ------------------------------------------------------------------------ */
   /* ======================================================================== */
 
+  /* ======================================================================== */
+  /* --------------------- room typign stirngs ------------------------------ */
+  /* ======================================================================== */
+
+  /**
+   * @brief makes sbasiede on the size given of the char tiile type
+   * @param tileTypeIn tile type char
+   * @param stringLength the striing were'er using
+   * @return the rooms tirng
+   */
+  public static String fillRoomStringWithTile(char tileTypeIn,int stringLength){
+    // base
+    String returnableString = "";
+    // loop for the ssize of the string and add
+    for(int i = 0; i < stringLength; i++) returnableString = returnableString + tileTypeIn;
+    // done
+    return returnableString;
+  }
+
+  /**
+   * @brief room char constants
+   */
+
+  public static final char ROOM_EMPTY    = '0';
+  public static final char ROOM_L        = '1';
+  public static final char ROOM_L_REV    = '2';
+  public static final char ROOM_L_INV    = '3';
+  public static final char ROOM_L_INVREV = '4';
+  public static final char ROOM_T        = '5';
+  public static final char ROOM_T_INV    = '6';
+  public static final char ROOM_BAR_H    = '7';
+  public static final char ROOM_BAR_V    = '8';
+  public static final char ROOM_PLUS     = '9';
+
+  /**
+   * @brief make a rooms string
+   * @param roomTypeIdx
+   * @return
+   */
+  public static String getRoomStringByType(char roomTypeIdx){
+    switch (roomTypeIdx) {
+      // ------------------------------------------
+      default:
+      case '\0': return "\0";
+      // ------------------------------------------
+      case ROOM_EMPTY:
+      return
+        "###"+
+        "###"+
+        "###";
+      // ------------------------------------------
+      case ROOM_L:
+      return
+        "*##"+
+        "*##"+
+        "***";
+      case ROOM_L_REV:
+      return
+        "##*"+
+        "##*"+
+        "***";
+      case ROOM_L_INV:
+      return
+        "***"+
+        "*##"+
+        "*##";
+      case ROOM_L_INVREV:
+      return
+        "***"+
+        "##*"+
+        "##*";
+      // ------------------------------------------
+      case ROOM_T:
+      return
+        "***"+
+        "#*#"+
+        "#*#";
+      case ROOM_T_INV:
+      return
+        "#*#"+
+        "#*#"+
+        "***";
+      // ------------------------------------------
+      case ROOM_BAR_H:
+      return
+        "###"+
+        "***"+
+        "###";
+      case ROOM_BAR_V:
+      return
+        "#*#"+
+        "#*#"+
+        "#*#";
+      // ------------------------------------------
+      case ROOM_PLUS:
+      return
+        "#*#"+
+        "***"+
+        "#*#";
+      // ------------------------------------------
+      // case '': return "\0";
+      // ------------------------------------------
+    }
+  }
+
+  /* ======================================================================== */
+  /* ------------------------------------------------------------------------ */
+  /* ======================================================================== */
+
 
   /* ======================================================================== */
   /* ----------------- untracked randomisation ------------------------------ */
   /* ======================================================================== */
-
   /** 
    * @brief used for generating the untracked seed/rng/random generations
    * @warning dont use this for anything you want to reproduce later,
@@ -305,6 +413,10 @@ public class CorbLib {
   /* ======================================================================== */
   /* ------------------------------------------------------------------------ */
   /* ======================================================================== */
+
+  public static Color getTileColor(char drawnType) {
+    return null;
+  }
 
 
 

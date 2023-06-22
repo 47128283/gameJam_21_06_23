@@ -6,16 +6,17 @@ import java.util.function.Consumer;
  
 class RoomGrid extends MapCell implements Iterable<RoomTile> {
 
+    // bad irl
     public static int tileSize = 35;
-    public static int colCount = 3;
-    public static int rowCount = 3;
-    public static int horizMargin = 10;
-    public static int vertiMargin = 10;
+    public int colCount = 3;
+    public int rowCount = 3;
+    public int horizMargin = 10;
+    public int vertiMargin = 10;
 
     // the tiles array
-    // TODO: change to be initialised only in the constructor
-    RoomTile[][] tiles = new RoomTile[colCount][rowCount];
+    RoomTile[][] tiles;
 
+    String roomBaseString;
     // holds the default tile type for this room
 
     char defaultTile;
@@ -25,6 +26,9 @@ class RoomGrid extends MapCell implements Iterable<RoomTile> {
     protected RoomGrid() {
         // default MapCell construction
         super();
+        // default sizing
+        colCount = 3; rowCount = 3;
+        tiles = new RoomTile[colCount][rowCount];
         // setup the cells
         for (int i = 0; i < tiles.length; i++) {
             for (int j = 0; j < tiles[i].length; j++) {
@@ -63,17 +67,23 @@ class RoomGrid extends MapCell implements Iterable<RoomTile> {
     public RoomGrid(long seedIn, char typeIn, int colIn, int rowIn){
         // make seedable instance by seed
         super(seedIn, typeIn, colIn, rowIn);
-
+        // fetch the room string
+        roomBaseString = CorbLib.getRoomStringByType(typeIn);
+        int roomSize = CorbLib.getSizeByStringLength(roomBaseString.length());
+        colCount = roomSize; rowCount = roomSize;
+        // make the tiles arrays
+        tiles = new RoomTile[colCount][rowCount];
+        // the index to grab from the string
+        int currCharIdxInString = 0;
         // loop all tiles
         for (int i = 0; i < tiles.length; i++) {
-            for (int j = 0; j < tiles[i].length; j++) {
+            for (int j = 0; j < tiles[i].length; j++,currCharIdxInString++) {
                 int x = horizMargin + tileSize * i;
                 int y = vertiMargin + tileSize * j;
-                // char[] tt = t.rooms.toCharArray();
-                // TODO: should be given by some "getTileString"
-                char currTile = CorbLib.getDefault_tileByRoomType(this.type);
+                // grab the char from the string
+                char currTile = roomBaseString.charAt(currCharIdxInString);
+                // the tile init
                 tiles[i][j] = new RoomTile(i, j, x, y, currTile);
-                // count ++;
             }
         }
     }
@@ -96,21 +106,19 @@ class RoomGrid extends MapCell implements Iterable<RoomTile> {
      * @brief takes a tile list and paints an overlay over them
      * @param g the graphics object
      * @param tileListIn the tile list to paint over
-     * @param color the color of overlay (should be alpha <1.0 tbh)
+     * @param overlayColor the color of overlay (should be alpha <1.0 tbh)
      */
-    public void paintOverlay(Graphics g, List<RoomTile> tileListIn, Color color) {
-        g.setColor(color);
-        for (RoomTile t : tileListIn) {
-            g.fillRect(t.x + 2, t.y + 2, t.width - 4, t.height - 4);
-        }
+    public void paintOverlay(Graphics g, List<RoomTile> tileListIn, Color overlayColor) {
+      // loop all tiles iin the list
+      for (RoomTile t : tileListIn) {
+        CorbLib.drawBox(g, t.x + 2, t.y + 2, t.width - 4, t.height - 4, overlayColor);
+      }
     }
 
     /**
      * @brief the painting of room grid with mousepos
      */
     public void paint(Graphics g, Point mousePos){
-      // paint as map cell
-      this.paint(g,mousePos);
       // then paint the tiles over
       for(RoomTile t : this){
         t.paint(g,mousePos);
@@ -144,6 +152,9 @@ class RoomGrid extends MapCell implements Iterable<RoomTile> {
       return new CellIterator<RoomTile>(tiles);
     }
 
+    /**
+     * @brief should just give back a string fo rthe cell types
+     */
     public String toString() {
       String retval = "";
       for(RoomTile t : this){

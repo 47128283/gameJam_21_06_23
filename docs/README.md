@@ -301,6 +301,12 @@
                     <li><code>[02:41pm]</code> ---> <i>changed to using functions for drawing pixel boxes so completely depreciated the <code>PixelBox</code> object</i></li>
                     <li><code>[02:41pm]</code> ---> <i>working on the making the replace for room tile object declarations</li>
                     <li><code> ----- ----- ----- ----- ----- </code></li>
+                    <li><code>[03:01pm]</code> ---> <i>woops submission happened</li>
+                    <li><code>[03:01pm]</code> ---> <i>replaced the tile object declarations</li>
+                    <li><code>[03:21pm]</code> ---> <i>we made pain irl</li>
+                    <li><code>[03:21pm]</code> ---> <i>fiiinished adding in the types sorta?</li>
+                    <li><code>[03:21pm]</code> ---> <i>started the room strings section</li>
+                    <li><code> ----- ----- ----- ----- ----- </code></li>
                     <li><code>[00:00pm]</code> ---> <i></i></li>
                     <li><code> ===== ===== ===== ===== ===== </code></li>
                 </ul>
@@ -406,6 +412,7 @@
             <ul>
               <li><code> ===== ===== ===== ===== ===== </code></li>
               <li><i>replace the tile thiingy with the new iin the cobrlib firle thingy how do type?</i></li>
+              <li><i>make sure that room is then drawing the tiles correctly offset and not by position</i></li>
               <li><code> ===== ===== ===== ===== ===== </code></li>
             </ul>
           </li>
