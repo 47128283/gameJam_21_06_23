@@ -49,7 +49,7 @@ public class Seedable {
   }
   public long rollLong(long bound){
     seedCalls++;
-    return seedInstance.nextLong(bound);
+    return seedInstance.nextLong()%bound;
   }
 
   /**
